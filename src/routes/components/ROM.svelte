@@ -4,7 +4,7 @@
 </script>
 
 <section>
-	<form class="row">
+	<form method="POST" class="row">
 		<div class="offset-3 col-lg-6">
 			<h1 class="mb-2 text-center">RENCANA OPERASI MINGGUAN</h1>
 			<h3 class="mb-4 text-center">{unit}</h3>
@@ -35,12 +35,24 @@
 							class="col-lg py-2 d-flex justify-content-evenly align-items-center border bg-secondary text-light"
 						>
 							<div class="form-check me-4">
-								<input class="form-check-input" type="radio" name={day} id="flexRadioDefault1" />
+								<input
+									class="form-check-input"
+									type="radio"
+									name={day}
+									id="flexRadioDefault1"
+									value="Stand by"
+								/>
 								<label class="form-check-label" for="flexRadioDefault1">Stand by</label>
 							</div>
 
 							<div class="form-check">
-								<input class="form-check-input" type="radio" name={day} id="flexRadioDefault2" />
+								<input
+									class="form-check-input"
+									type="radio"
+									name={day}
+									id="flexRadioDefault2"
+									value="Pemeliharaan"
+								/>
 								<label class="form-check-label" for="flexRadioDefault2">Pemeliharaan</label>
 							</div>
 						</div>

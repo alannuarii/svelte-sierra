@@ -131,7 +131,6 @@
 </section>
 
 <style>
-	h3,
 	h6 {
 		margin: 0px;
 	}

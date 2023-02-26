@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>MeetingApp</title>
+	<title>SIERRA</title>
 	<meta name="description" content="EnvironApp" />
 </svelte:head>
 
