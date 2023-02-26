@@ -1,5 +1,5 @@
 <section>
-	<form class="row">
+	<form method="POST" enctype="multipart/form-data" class="row">
 		<div class="offset-3 col-lg-6">
 			<h1 class="mb-2 text-center">DATA IRRADIANCE</h1>
 			<h3 class="mb-4 text-center">PLTS Sangihe</h3>
@@ -9,15 +9,11 @@
 				>
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Tanggal</label>
-					<input
-						type="date"
-						class="form-control"
-						id="exampleFormControlInput1"
-					/>
+					<input type="date" class="form-control" id="exampleFormControlInput1" name="tanggal" />
 				</div>
 				<div class="mb-4">
 					<label for="exampleFormControlInput2" class="form-label">Upload File</label>
-					<input type="file" class="form-control" />
+					<input type="file" class="form-control" name="irradiance" />
 				</div>
 				<div>
 					<p class="mb-2">Keterangan:</p>

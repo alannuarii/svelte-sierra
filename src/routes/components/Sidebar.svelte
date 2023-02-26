@@ -36,7 +36,7 @@
 			</div>
 		</li>
 		<li class="nav-item">
-			<a href="/" class="nav-link py-3 text-secondary" aria-current="page"
+			<a href="/forecast" class="nav-link py-3 text-secondary" aria-current="page"
 				><i class="bi-record-circle text-primary p-1 me-2" /> Forecast
 			</a>
 		</li>
