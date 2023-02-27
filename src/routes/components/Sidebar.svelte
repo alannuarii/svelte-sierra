@@ -32,6 +32,11 @@
 						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
 						>ROM PLTS</a
 					>
+					<a
+						href="/input/rom-bss"
+						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
+						>ROM BSS</a
+					>
 				</div>
 			</div>
 		</li>

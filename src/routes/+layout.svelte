@@ -27,7 +27,7 @@
 		overflow-x: hidden;
 	}
     .content{
-        height: 662px;
+        height: 643px;
 		overflow-x: hidden;
 		overflow-y: auto;
     }
