@@ -1,5 +1,11 @@
+<script>
+	import icon from '../../lib/img/icon.png';
+</script>
+
 <div id="sidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-dark">
-	<h1 class="text-dark text-center bg-primary rounded-pill">SIERRA</h1>
+	<div class="d-flex justify-content-center mb-4">
+		<img src={icon} class="img-fluid" alt="" />
+	</div>
 	<ul class="nav nav-pills flex-column">
 		<li class="nav-item">
 			<a href="/" class="nav-link py-3 text-secondary" aria-current="page"
@@ -61,5 +67,8 @@
 	}
 	.list-group a:hover {
 		color: #0d6efd !important;
+	}
+	img {
+		height: 100px;
 	}
 </style>
