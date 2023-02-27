@@ -6,7 +6,7 @@ export const actions = {
 		formData.append('tanggal', data.get('tanggal'));
 		formData.append('irradiance', data.get('irradiance'));
 
-		const res = await fetch('http://127.0.0.1:5000/irradiance', {
+		const res = await fetch('https://sierra.anpy.my.id/irradiance', {
 			method: 'POST',
 			body: formData
 		});

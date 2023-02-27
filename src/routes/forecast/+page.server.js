@@ -11,23 +11,23 @@ export const load = async (params) => {
 	const tomorrow = getTomorrow();
 
 	if (!tanggal) {
-		const res1 = await fetch(`http://127.0.0.1:5000/irradiance/${tomorrow}`);
+		const res1 = await fetch(`https://sierra.anpy.my.id/irradiance/${tomorrow}`);
 		data1 = res1.json();
 	} else {
-		const res1 = await fetch(`http://127.0.0.1:5000/irradiance/${tanggal}`);
+		const res1 = await fetch(`https://sierra.anpy.my.id/irradiance/${tanggal}`);
 		data1 = res1.json();
 	}
 
-	const res2 = await fetch(`http://127.0.0.1:5000/weather`);
+	const res2 = await fetch(`https://sierra.anpy.my.id/weather`);
 	data2 = res2.json();
 
-	const res3 = await fetch(`http://127.0.0.1:5000/rompltd/${tomorrow}`);
+	const res3 = await fetch(`https://sierra.anpy.my.id/rompltd/${tomorrow}`);
 	data3 = res3.json();
 
-	const res4 = await fetch(`http://127.0.0.1:5000/rompv/${tomorrow}`);
+	const res4 = await fetch(`https://sierra.anpy.my.id/rompv/${tomorrow}`);
 	data4 = res4.json();
 
-	const res5 = await fetch(`http://127.0.0.1:5000/rombss/${tomorrow}`);
+	const res5 = await fetch(`https://sierra.anpy.my.id/rombss/${tomorrow}`);
 	data5 = res5.json();
 
 	return {

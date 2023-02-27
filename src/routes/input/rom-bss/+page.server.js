@@ -20,7 +20,7 @@ export const actions = {
 		formData.append('rabu2', data.get('rabu2'));
 		formData.append('kamis2', data.get('kamis2'));
 
-		const res = await fetch('http://127.0.0.1:5000/rom', {
+		const res = await fetch('https://sierra.anpy.my.id/rom', {
 			method: 'POST',
 			body: formData
 		});
