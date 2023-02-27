@@ -4,7 +4,7 @@
 
 <nav class="navbar bg-light-subtle shadow">
 	<div class="container-fluid">
-		<a class="navbar-brand text-dark ms-3" href="/">S I E R R A</a>
+		<a class="navbar-brand text-dark ms-3 d-flex align-items-center" href="/">S I E R R A<span class="ms-2">| Sangihe Solar Irradiance Forecaster</span></a>
 		<div class="dropdown-center">
 			<div class="me-3 user d-flex" data-bs-toggle="dropdown" data-bs-display="static">
 				<img src={unknown} class="me-2" alt="" />
@@ -47,5 +47,10 @@
 	}
 	h6 {
 		font-weight: 300;
+	}
+	span{
+		font-weight: 100;
+		font-size: smaller;
+		margin: 0px;
 	}
 </style>
