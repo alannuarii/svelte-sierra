@@ -3,11 +3,14 @@ import { getTomorrow } from '../../lib/js/date';
 export const load = async (params) => {
 	let data1;
 	let data2;
+	let data3;
+	let data4;
+	let data5;
 
 	const tanggal = params.url.searchParams.get('tanggal');
+	const tomorrow = getTomorrow();
 
 	if (!tanggal) {
-		const tomorrow = getTomorrow();
 		const res1 = await fetch(`http://127.0.0.1:5000/irradiance/${tomorrow}`);
 		data1 = res1.json();
 	} else {
@@ -18,8 +21,20 @@ export const load = async (params) => {
 	const res2 = await fetch(`http://127.0.0.1:5000/weather`);
 	data2 = res2.json();
 
+	const res3 = await fetch(`http://127.0.0.1:5000/rompltd/${tomorrow}`);
+	data3 = res3.json();
+
+	const res4 = await fetch(`http://127.0.0.1:5000/rompv/${tomorrow}`);
+	data4 = res4.json();
+
+	const res5 = await fetch(`http://127.0.0.1:5000/rombss/${tomorrow}`);
+	data5 = res5.json();
+
 	return {
 		data1,
-		data2
+		data2,
+		data3,
+		data4,
+		data5
 	};
 };
