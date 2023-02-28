@@ -26,30 +26,54 @@
 					<a
 						href="/input/data-irradiance"
 						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
-						>Data Irradiance</a
+						><i class="bi-record" /> Data Irradiance</a
 					>
 					<a
 						href="/input/rom-pltd"
 						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
-						>ROM PLTD</a
+						><i class="bi-record" /> ROM PLTD</a
 					>
 					<a
 						href="/input/rom-plts"
 						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
-						>ROM PLTS</a
+						><i class="bi-record" /> ROM PLTS</a
 					>
 					<a
 						href="/input/rom-bss"
 						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
-						>ROM BSS</a
+						><i class="bi-record" /> ROM BSS</a
 					>
 				</div>
 			</div>
 		</li>
-		<li class="nav-item">
+		<!-- <li class="nav-item">
 			<a href="/forecast" class="nav-link py-3 text-secondary" aria-current="page"
 				><i class="bi-record-circle text-primary p-1 me-2" /> Forecast
 			</a>
+		</li> -->
+		<li class="nav-item">
+			<div
+				class="nav-link py-3 text-secondary"
+				aria-current="page"
+				data-bs-toggle="collapse"
+				data-bs-target="#collapseExample2"
+			>
+				<i class="bi-record-circle text-primary p-1 me-2" /> Forecast
+			</div>
+			<div class="collapse" id="collapseExample2">
+				<div class="list-group ms-5">
+					<a
+						href="/forecast/today"
+						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
+						><i class="bi-record" /> Hari Ini</a
+					>
+					<a
+						href="/forecast/tomorrow"
+						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
+						><i class="bi-record" /> Besok</a
+					>
+				</div>
+			</div>
 		</li>
 	</ul>
 </div>

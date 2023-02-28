@@ -40,5 +40,5 @@
 	}
 </script>
 
-<img src={gambar} class="img-fluid" alt="" />
+<img src={gambar} class="img-fluid py-3" alt="" />
 <h4>{cuaca}</h4>

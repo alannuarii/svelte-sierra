@@ -1,3 +1,5 @@
+import { API_ENDPOINT } from '../../../lib/js/endpoint';
+
 export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
@@ -20,7 +22,7 @@ export const actions = {
 		formData.append('rabu2', data.get('rabu2'));
 		formData.append('kamis2', data.get('kamis2'));
 
-		const res = await fetch('https://sierra.anpy.my.id/rom', {
+		const res = await fetch(`${API_ENDPOINT}/rom`, {
 			method: 'POST',
 			body: formData
 		});

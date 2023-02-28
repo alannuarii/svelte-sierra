@@ -1,5 +1,5 @@
-import { getTomorrow } from '../../lib/js/date';
-import { API_ENDPOINT } from '../../lib/js/endpoint';
+import { getTomorrow } from '../../../lib/js/date';
+import { API_ENDPOINT } from '../../../lib/js/endpoint';
 
 export const load = async (params) => {
 	let data1;
@@ -11,15 +11,10 @@ export const load = async (params) => {
 	const tanggal = params.url.searchParams.get('tanggal');
 	const tomorrow = getTomorrow();
 
-	if (!tanggal) {
-		const res1 = await fetch(`${API_ENDPOINT}/irradiance/${tomorrow}`);
-		data1 = res1.json();
-	} else {
-		const res1 = await fetch(`${API_ENDPOINT}/irradiance/${tanggal}`);
-		data1 = res1.json();
-	}
+	const res1 = await fetch(`${API_ENDPOINT}/irradiance/${tomorrow}`);
+	data1 = res1.json();
 
-	const res2 = await fetch(`${API_ENDPOINT}/weather`);
+	const res2 = await fetch(`${API_ENDPOINT}/weather-tomorrow`);
 	data2 = res2.json();
 
 	const res3 = await fetch(`${API_ENDPOINT}/rompltd/${tomorrow}`);
