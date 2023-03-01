@@ -1,26 +1,26 @@
 <script>
-	// export let suhu;
-	// export let kelembaban;
-	// export let angin;
+	export let temperature;
+	export let humidity;
+	export let wind;
 
-	// const satuan = '(C' + String.fromCharCode(0) + '/hari)';
+	const satuan = '\u00B0C';
 </script>
 
 <div class="d-flex justify-content-evenly align-content-center">
 	<div class="text-center">
-		<h6 class="mb-1">Suhu Udara</h6>
+		<h6 class="mb-1 bg-secondary text-light p-1">Suhu Udara</h6>
 		<i class="bi-thermometer-half" />
-		<p>20 C</p>
+		<p>{temperature} {satuan}</p>
 	</div>
 	<div class="text-center">
-		<h6 class="mb-1">Kelembaban Udara</h6>
+		<h6 class="mb-1 bg-secondary text-light p-1">Kelembaban Udara</h6>
 		<i class="bi-droplet-half" />
-		<p>20 %</p>
+		<p>{humidity} %</p>
 	</div>
 	<div class="text-center">
-		<h6 class="mb-1">Kecepatan Angin</h6>
+		<h6 class="mb-1 bg-secondary text-light p-1">Kecepatan Angin</h6>
 		<i class="bi-wind" />
-		<p>20 knot</p>
+		<p>{wind} knot</p>
 	</div>
 </div>
 
@@ -34,7 +34,6 @@
 	h6 {
 		margin: 0px;
 		font-size: 13px;
-		font-weight: 400;
 	}
 	i {
 		font-size: 30px;

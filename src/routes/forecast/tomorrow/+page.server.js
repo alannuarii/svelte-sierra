@@ -8,7 +8,6 @@ export const load = async (params) => {
 	let data4;
 	let data5;
 
-	const tanggal = params.url.searchParams.get('tanggal');
 	const tomorrow = getTomorrow();
 
 	const res1 = await fetch(`${API_ENDPOINT}/irradiance/${tomorrow}`);

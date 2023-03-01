@@ -4,10 +4,14 @@
 	import { date } from '../../lib/js/date';
 	import { modeOperasi } from '../../lib/js/mode';
 	import { averageIrradiance } from '../../lib/js/avgIrr';
+	import Parameter from './Parameter.svelte';
 
 	export let day;
 	export let irradiance;
 	export let weather;
+	export let temperature;
+	export let humidity;
+	export let wind;
 	export let pltd;
 	export let pv;
 	export let bss;
@@ -42,12 +46,13 @@
 				<label for="exampleFormControlInput1" class="form-label">Mode Operasi</label>
 				<input type="text" class="form-control" value={mode} disabled />
 			</div>
-			<div class="mt-4 border">
+			<div class="mt-4 border mb-3">
 				<h6 class="text-center p-2 bg-secondary text-light">Prediksi Cuaca</h6>
 				<div class="d-flex flex-column justify-content-center align-items-center">
 					<Weather {weather} />
 				</div>
 			</div>
+			<Parameter {temperature} {humidity} {wind} />
 		</div>
 		<div class="col-lg-8 text-center">
 			<IrradianceChart {irradiance} />
