@@ -15,4 +15,4 @@
 	const bss = data.data5.data;
 </script>
 
-<Forecast day={tomorrow} {irradiance} {weather} {pltd} {pv} {bss} />
+<Forecast day={tomorrow} {irradiance} {weather} {temperature} {humidity} {wind} {pltd} {pv} {bss} />

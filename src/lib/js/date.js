@@ -41,11 +41,23 @@ export const yearMonthNow = () => {
 	// 2023-02 tahun dan bulan saat ini
 };
 
-export const yearMonthID = (format)=>{
+export const yearMonthID = (format) => {
 	const date = new Date(format); // Membuat objek Date dari string
 	const month = new Intl.DateTimeFormat('id-ID', { month: 'long' }).format(date); // Mengambil nama bulan dalam bahasa Indonesia
 	const year = date.getFullYear(); // Mengambil tahun
 	const formattedDate = `${month} ${year}`;
-	return formattedDate
+	return formattedDate;
 	// Feburari 2023
-}
+};
+
+export const getBefore4Day = () => {
+	var dateArray = [];
+
+	for (let i = 0; i < 4; i++) {
+		let date = new Date();
+		date.setHours(date.getHours() + 8);
+		date.setDate(date.getDate() - i);
+		dateArray.push(date.toISOString().slice(0, 10));
+	}
+	return dateArray;
+};

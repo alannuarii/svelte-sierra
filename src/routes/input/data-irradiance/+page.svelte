@@ -1,3 +1,28 @@
+<script>
+	import { getBefore4Day } from '../../../lib/js/date';
+	export let data;
+	let dates = data.data;
+	let fourDays = getBefore4Day();
+	const savedData = dates.map((obj) => {
+		const tanggalObj = new Date(obj.tanggal);
+		return tanggalObj.toLocaleDateString('id-ID', {
+			day: '2-digit',
+			month: '2-digit',
+			year: 'numeric'
+		});
+	});
+	const arrayDays = fourDays.map((tanggal) => {
+		const tanggalObj = new Date(tanggal);
+		return tanggalObj.toLocaleDateString('id-ID', {
+			day: '2-digit',
+			month: '2-digit',
+			year: 'numeric'
+		});
+	});
+	console.log(arrayDays);
+	console.log(savedData);
+</script>
+
 <section>
 	<form method="POST" enctype="multipart/form-data" class="row">
 		<div class="offset-3 col-lg-6">
@@ -10,6 +35,18 @@
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Tanggal</label>
 					<input type="date" class="form-control" id="exampleFormControlInput1" name="tanggal" />
+					<div class="d-flex flex-wrap justify-content-evenly mt-2">
+						{#each arrayDays as day}
+							<p class="tanggal">
+								<i
+									class={savedData.includes(day)
+										? 'bi-check-square-fill text-success'
+										: 'bi-x-square-fill text-danger'}
+								/>
+								{day}
+							</p>
+						{/each}
+					</div>
 				</div>
 				<div class="mb-4">
 					<label for="exampleFormControlInput2" class="form-label">Upload File</label>
@@ -51,5 +88,9 @@
 	}
 	p {
 		margin: 0px;
+	}
+	.tanggal {
+		margin: 0px;
+		font-size: 13px;
 	}
 </style>
