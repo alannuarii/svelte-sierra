@@ -1,6 +1,7 @@
 <script>
 	import Weather from './Weather.svelte';
 	import IrradianceChart from './IrradianceChart.svelte';
+	import ModalSop from './ModalSOP.svelte';
 	import { date } from '../../lib/js/date';
 	import { modeOperasi } from '../../lib/js/mode';
 	import { averageIrradiance } from '../../lib/js/avgIrr';
@@ -22,7 +23,7 @@
 	let cuaca;
 	let maxIrradiance;
 
-	if (weather === 0 || weather === 1 || weather === 2) {
+	if (parseInt(weather) === 0 || parseInt(weather) === 1 || parseInt(weather) === 2) {
 		cuaca = 1;
 	} else {
 		cuaca = 0;
@@ -33,6 +34,7 @@
 	maxIrradiance = Math.max(...arrayIrradiance);
 
 	const mode = modeOperasi(totalPLTD, totalPV, totalBSS, cuaca, maxIrradiance);
+	console.log(totalPLTD, totalPV, totalBSS, cuaca, maxIrradiance, weather);
 </script>
 
 <section>
@@ -44,7 +46,15 @@
 		<div class="col-lg-4">
 			<div class="mb-3">
 				<label for="exampleFormControlInput1" class="form-label">Mode Operasi</label>
-				<input type="text" class="form-control" value={mode} disabled />
+				<div class="row">
+					<div class="col-8"><input type="text" class="form-control" value={mode} disabled /></div>
+					<div class="col-4">
+						<button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalSOP"
+							>Lihat SOP</button
+						>
+					</div>
+					<ModalSop />
+				</div>
 			</div>
 			<div class="mt-4 border mb-3">
 				<h6 class="text-center p-2 bg-secondary text-light">Prediksi Cuaca</h6>
@@ -63,5 +73,9 @@
 <style>
 	h6 {
 		margin: 0px;
+	}
+	button,
+	input {
+		border-radius: 0px;
 	}
 </style>

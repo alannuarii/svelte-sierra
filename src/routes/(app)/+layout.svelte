@@ -1,11 +1,11 @@
 <script>
-	import Sidebar from './components/Sidebar.svelte';
-	import Header from './components/Header.svelte';
+	import Sidebar from '../components/Sidebar.svelte'
+	import Header from '../components/Header.svelte';
 </script>
 
 <svelte:head>
 	<title>SIERRA</title>
-	<meta name="description" content="EnvironApp" />
+	<meta name="description" content="SIERRA" />
 </svelte:head>
 
 <main>

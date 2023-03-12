@@ -89,7 +89,7 @@
 	.nav-item {
 		cursor: pointer;
 	}
-	.list-group a:hover {
+	a:hover {
 		color: #0d6efd !important;
 	}
 	img {

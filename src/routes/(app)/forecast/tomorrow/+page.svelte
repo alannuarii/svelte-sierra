@@ -1,6 +1,6 @@
 <script>
-	import Forecast from '../../components/Forecast.svelte';
-	import { getTomorrow } from '../../../lib/js/date';
+	import Forecast from '../../../components/Forecast.svelte';
+	import { getTomorrow } from '../../../../lib/js/date';
 
 	const tomorrow = getTomorrow();
 

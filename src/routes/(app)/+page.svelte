@@ -1,6 +1,5 @@
 <script>
-	import pv from '../lib/img/pv.jpg';
-	import icon from '../lib/img/icon.png';
+	import icon from '../../lib/img/icon.png';
 </script>
 
 <section class="position-relative">
@@ -15,7 +14,7 @@
 
 <style>
 	section {
-		background-image: url('../lib/img/pv.jpg');
+		background-image: url('../../lib/img/pv.jpg');
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -36,7 +35,7 @@
 	.sierra {
 		border-radius: 70px;
 	}
-	.icon-sierra{
+	.icon-sierra {
 		height: 100px;
 	}
 </style>

@@ -1,5 +1,5 @@
 <script>
-	import { getBefore4Day } from '../../../lib/js/date';
+	import { getBefore4Day } from '../../../../lib/js/date';
 	export let data;
 	let dates = data.data;
 	let fourDays = getBefore4Day();
@@ -19,8 +19,6 @@
 			year: 'numeric'
 		});
 	});
-	console.log(arrayDays);
-	console.log(savedData);
 </script>
 
 <section>
