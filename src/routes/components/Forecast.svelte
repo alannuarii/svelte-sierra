@@ -34,7 +34,6 @@
 	maxIrradiance = Math.max(...arrayIrradiance);
 
 	const mode = modeOperasi(totalPLTD, totalPV, totalBSS, cuaca, maxIrradiance);
-	console.log(totalPLTD, totalPV, totalBSS, cuaca, maxIrradiance, weather);
 </script>
 
 <section>

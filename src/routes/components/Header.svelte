@@ -1,6 +1,12 @@
 <script>
 	import unknown from '../../lib/img/unknown.png';
 	let login = false;
+
+	export let status;
+
+	if (status.length !== 0) {
+		login = true;
+	}
 </script>
 
 <nav class="navbar bg-light-subtle shadow">
@@ -12,19 +18,18 @@
 			<div class="dropdown-center">
 				<div class="me-3 user d-flex" data-bs-toggle="dropdown" data-bs-display="static">
 					<img src={unknown} class="me-2" alt="" />
-					<h6 class="d-block my-auto">Super User</h6>
+					<h6 class="d-block my-auto">{status.token.sub.name}</h6>
 				</div>
 				<ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark">
 					<li>
-						<a class="dropdown-item d-flex align-items-center justify-content-center" href="/"
+						<a class="dropdown-item d-flex align-items-center justify-content-center" href="/logout"
 							><i class="bi-box-arrow-right me-2" />Log Out</a
 						>
 					</li>
 				</ul>
 			</div>
 		{:else}
-			<a href="/login" class="btn btn-secondary"><i class="bi-box-arrow-in-right me-2" />Login</a
-			>
+			<a href="/login" class="btn btn-secondary"><i class="bi-box-arrow-in-right me-2" />Login</a>
 		{/if}
 	</div>
 </nav>

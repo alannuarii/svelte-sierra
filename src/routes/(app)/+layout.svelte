@@ -1,6 +1,9 @@
 <script>
-	import Sidebar from '../components/Sidebar.svelte'
+	import Sidebar from '../components/Sidebar.svelte';
 	import Header from '../components/Header.svelte';
+
+	export let data;
+
 </script>
 
 <svelte:head>
@@ -14,7 +17,7 @@
 			<Sidebar />
 		</div>
 		<div class="col-lg-10">
-			<Header />
+			<Header status={data} />
 			<div class="content px-5 py-4 bg-body-tertiary">
 				<slot />
 			</div>
@@ -26,9 +29,9 @@
 	main {
 		overflow-x: hidden;
 	}
-    .content{
-        height: 643px;
+	.content {
+		height: 643px;
 		overflow-x: hidden;
 		overflow-y: auto;
-    }
+	}
 </style>

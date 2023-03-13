@@ -7,10 +7,10 @@
 		class="outer position-absolute top-50 start-50 translate-middle border p-5 bg-secondary-subtle opacity-75"
 	>
 		<div class="icon d-flex justify-content-center align-items-center mb-3">
-            <img src={icon} alt="" />
-            <h3>SIERRA</h3>
-        </div>
-		<form>
+			<img src={icon} alt="" />
+			<h3>SIERRA</h3>
+		</div>
+		<form method="POST">
 			<div class="input-group mb-1">
 				<span class="input-group-text bg-dark text-light"><i class="bi-person-circle" /></span>
 				<div class="form-floating">
@@ -19,6 +19,7 @@
 						class="form-control bg-dark-subtle"
 						id="floatingInputGroup1"
 						placeholder="Email User"
+						name="email"
 					/>
 					<label for="floatingInputGroup1">Email User</label>
 				</div>
@@ -31,13 +32,14 @@
 						class="form-control bg-dark-subtle"
 						id="floatingInputGroup1"
 						placeholder="Password"
+						name="password"
 					/>
 					<label for="floatingInputGroup1">Password</label>
 				</div>
 			</div>
 			<div class="mt-3 d-flex justify-content-center">
-				<button class="btn btn-outline-secondary w-50">Reset</button>
-				<button class="btn btn-primary w-50">Login</button>
+				<button class="btn btn-outline-secondary w-50" type="reset">Reset</button>
+				<button class="btn btn-primary w-50" type="submit">Login</button>
 			</div>
 		</form>
 	</div>
@@ -54,21 +56,21 @@
 	}
 	.outer {
 		width: 30%;
-        border-radius: 50px;
+		border-radius: 50px;
 	}
 	button,
 	input,
 	span {
 		border-radius: 0px;
 	}
-    img{
-        height: 80px;
-    }
-    h3{
-        font-weight: 700;
-        font-size: 50px;
-    }
-    .icon{
-        margin-top: -12px;
-    }
+	img {
+		height: 80px;
+	}
+	h3 {
+		font-weight: 700;
+		font-size: 50px;
+	}
+	.icon {
+		margin-top: -12px;
+	}
 </style>
