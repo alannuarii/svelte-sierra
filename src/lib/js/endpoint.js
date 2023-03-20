@@ -1,1 +1,1 @@
-export const API_ENDPOINT = 'https://sierra.anpy.my.id'
+export const API_ENDPOINT = 'https://api.sierra.my.id'
