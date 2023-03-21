@@ -22,7 +22,6 @@
 			friday.setDate(friday.getDate() + 1);
 		}
 	};
-	$: console.log(dates);
 </script>
 
 <section>
