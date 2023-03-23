@@ -18,7 +18,7 @@
 			<div class="dropdown-center">
 				<div class="me-3 user d-flex" data-bs-toggle="dropdown" data-bs-display="static">
 					<img src={unknown} class="me-2" alt="" />
-					<h6 class="d-block my-auto">{status.token.sub.name}</h6>
+					<h6 class="d-block my-auto">{status.token.name}</h6>
 				</div>
 				<ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark">
 					<li>
