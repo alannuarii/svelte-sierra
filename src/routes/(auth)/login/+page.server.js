@@ -38,7 +38,7 @@ export const actions = {
 			parsedData[name] = value;
 		}
 
-		const res = await fetch('http://api2.sierra.my.id/login', {
+		const res = await fetch('https://api2.sierra.my.id/login', {
 			method: 'POST',
 			body: JSON.stringify(parsedData),
 			headers: {
