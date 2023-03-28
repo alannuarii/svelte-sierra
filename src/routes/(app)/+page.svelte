@@ -39,7 +39,7 @@
 	$: console.log(bebanPlts);
 
 	const satuanTemp = '\u00B0C';
-	const satuanIrr = 'm' + String.fromCharCode(0x00b3);
+	const satuanIrr = 'm' + String.fromCharCode(0x00b2);
 </script>
 
 <section class="text-center">
