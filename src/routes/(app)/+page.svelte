@@ -38,7 +38,8 @@
 
 	$: console.log(bebanPlts);
 
-	const satuan = '\u00B0C';
+	const satuanTemp = '\u00B0C';
+	const satuanIrr = 'm' + String.fromCharCode(0x00b3);
 </script>
 
 <section class="text-center">
@@ -136,7 +137,7 @@
 			<div class="card text-bg-light mb-3" style="max-width: 18rem;">
 				<div class="card-header">Irradiance</div>
 				<div class="card-body">
-					<h5 class="card-title">500 <span>kW</span></h5>
+					<h5 class="card-title">500 <span>Watt/{satuanIrr}</span></h5>
 				</div>
 			</div>
 		</div>
@@ -144,7 +145,7 @@
 			<div class="card text-bg-light mb-3" style="max-width: 18rem;">
 				<div class="card-header">Temperature</div>
 				<div class="card-body">
-					<h5 class="card-title">25 <span>{satuan}</span></h5>
+					<h5 class="card-title">25 <span>{satuanTemp}</span></h5>
 				</div>
 			</div>
 		</div>
