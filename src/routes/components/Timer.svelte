@@ -14,23 +14,18 @@
 		minutes = (minutes < 10 ? '0' : '') + minutes;
 		seconds = (seconds < 10 ? '0' : '') + seconds;
 
-		time = `${hours} : ${minutes} : ${seconds}`;
+		time = `${hours}:${minutes}:${seconds}`;
 	}, 1000);
 </script>
 
-<div class="text-center bg-dark text-light py-2">
-	<h5>{date(today)}</h5>
-	<span class="">{time}</span>
+<div class="text-center mb-3">
+	<h5>{date(today)} {time} WITA</h5>
 </div>
 
 <style>
 	h5 {
 		margin: 0px;
-		font-size: 16px;
-	}
-	span {
-		font-size: 30px;
-        margin: 0px;
-        font-weight: 700;
+		font-size: 20px;
+		font-weight: 300;
 	}
 </style>
