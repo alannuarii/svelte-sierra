@@ -59,16 +59,16 @@ export const formatTanggal = (format) => {
 
 export const formatTanggalObject = (data) => {
 	const result = data.map((item) => {
-	  const dateStr = item.tanggal;
-	  const dateObj = new Date(dateStr);
-	  const year = dateObj.getFullYear();
-	  const month = ('0' + (dateObj.getMonth() + 1)).slice(-2);
-	  const day = ('0' + dateObj.getDate()).slice(-2);
-	  return `${year}-${month}-${day}`;
+		const dateStr = item.tanggal;
+		const dateObj = new Date(dateStr);
+		const year = dateObj.getFullYear();
+		const month = ('0' + (dateObj.getMonth() + 1)).slice(-2);
+		const day = ('0' + dateObj.getDate()).slice(-2);
+		return `${year}-${month}-${day}`;
 	});
 	return result;
 	// [ '2023-05-09', '2023-05-08' ]
-  };
+};
 
 export const yearMonthNow = () => {
 	const date = new Date();
@@ -101,4 +101,40 @@ export const getBefore4Day = () => {
 	// [ '2023-05-09', '2023-05-08', '2023-05-07', '2023-05-06' ]
 };
 
+export const getThursday = () => {
+	const today = new Date();
+
+	const daysUntilThursday = (4 - today.getDay() + 7) % 7;
+	const nextThursday = new Date(
+		today.getFullYear(),
+		today.getMonth(),
+		today.getDate() + daysUntilThursday
+	);
+
+	const nextThursdayDate = `${nextThursday.getFullYear()}-${String(
+		nextThursday.getMonth() + 1
+	).padStart(2, '0')}-${String(nextThursday.getDate()).padStart(2, '0')}`;
+
+	return nextThursdayDate;
+	// 2023-05-11
+};
+
+export const getFriday = () => {
+	const today = new Date();
+
+	const daysUntilFriday = (5 - today.getDay() + 7) % 7;
+	const nextFriday = new Date(
+		today.getFullYear(),
+		today.getMonth(),
+		today.getDate() + daysUntilFriday
+	);
+
+	const nextFridayDate = `${nextFriday.getFullYear()}-${String(nextFriday.getMonth() + 1).padStart(
+		2,
+		'0'
+	)}-${String(nextFriday.getDate()).padStart(2, '0')}`;
+
+	return nextFridayDate;
+	// 2023-05-11
+};
 

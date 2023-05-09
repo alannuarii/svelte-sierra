@@ -1,7 +1,6 @@
 <script>
 	import unknown from '../../lib/img/unknown.png';
-	import { date2 } from '../../lib/js/date';
-	let login = false;
+	import { date2, getThursday, getToday, getFriday } from '../../lib/js/date';
 
 	export let status;
 	export let irr1;
@@ -9,8 +8,15 @@
 	export let irr3;
 	export let irr4;
 
+	let login = false;
+	let thursday = false;
+
 	if (status.length !== 0) {
 		login = true;
+	}
+
+	if (getThursday() === getToday()) {
+		thursday = true;
 	}
 </script>
 
@@ -25,27 +31,34 @@
 					class="bi-bell-fill notif position-relative"
 					data-bs-toggle="dropdown"
 					data-bs-display="static"
-					><span class="notif-dot bg-danger border border-3 border-light rounded-circle">
-						<span class="visually-hidden">New alerts</span>
-					</span></i
 				>
+					{#if thursday === false || irr1 !== 0 || irr2 !== 0 || irr3 !== 0 || irr4 !== 0}
+						<span class="notif-dot bg-danger border border-3 border-light rounded-circle">
+							<span class="visually-hidden">New alerts</span>
+						</span>
+					{/if}
+				</i>
 				<ul class="dropdown-menu dropdown-menu-dark p-1 notif-menu">
 					<div class="list-group">
-						<a
-							href="/input/rom-pltd"
-							class="list-group-item list-group-item-action bg-transparent text-light border-0"
-							>ROM PLTD tanggal 12 Mei 2023 belum diinput</a
-						>
-						<a
-							href="/input/rom-plts"
-							class="list-group-item list-group-item-action bg-transparent text-light border-0"
-							>ROM PLTS tanggal 12 Mei 2023 belum diinput</a
-						>
-						<a
-							href="/input/rom-bss"
-							class="list-group-item list-group-item-action bg-transparent text-light border-0"
-							>ROM BSS tanggal 12 Mei 2023 belum diinput</a
-						>
+						{#if thursday}
+							<a
+								href="/input/rom-pltd"
+								class="list-group-item list-group-item-action bg-transparent text-light border-0"
+								>ROM PLTD tanggal {date2(getFriday())} belum diinput</a
+							>
+
+							<a
+								href="/input/rom-plts"
+								class="list-group-item list-group-item-action bg-transparent text-light border-0"
+								>ROM PLTS tanggal {date2(getFriday())} belum diinput</a
+							>
+							<a
+								href="/input/rom-bss"
+								class="list-group-item list-group-item-action bg-transparent text-light border-0"
+								>ROM BSS tanggal {date2(getFriday())} belum diinput</a
+							>
+						{/if}
+
 						{#if irr1 !== 0}
 							<a
 								href="/input/data-irradiance"

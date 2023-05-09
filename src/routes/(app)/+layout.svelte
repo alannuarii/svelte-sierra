@@ -1,11 +1,12 @@
 <script>
 	import Sidebar from '../components/Sidebar.svelte';
 	import Header from '../components/Header.svelte';
-	import { formatTanggalObject, getBefore4Day } from '../../lib/js/date';
+	import { formatTanggalObject, getBefore4Day} from '../../lib/js/date';
 
 	export let data;
 	const status = data.token;
 	const irrDateObj = formatTanggalObject(data.data1.data);
+
 	const dateObj = getBefore4Day();
 
 	const irrDate = dateObj.filter((item) => !irrDateObj.includes(item));
