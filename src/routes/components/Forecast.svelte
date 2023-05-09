@@ -52,7 +52,7 @@
 							>Lihat SOP</button
 						>
 					</div>
-					<ModalSop />
+					<ModalSop {mode} />
 				</div>
 			</div>
 			<div class="mt-4 border mb-3">
