@@ -1,14 +1,19 @@
 <script>
 	import Sidebar from '../components/Sidebar.svelte';
 	import Header from '../components/Header.svelte';
+	import { formatTanggalObject, getBefore4Day } from '../../lib/js/date';
 
 	export let data;
 	const status = data.token;
-	const irr1 = data.data1.data.length > 0 ? data.data1.data[0].tanggal : 0;
-	const irr2 = data.data1.data.length > 1 ? data.data1.data[1].tanggal : 0;
-	const irr3 = data.data1.data.length > 2 ? data.data1.data[2].tanggal : 0;
-	const irr4 = data.data1.data.length > 3 ? data.data1.data[3].tanggal : 0;
-	console.log(irr1)
+	const irrDateObj = formatTanggalObject(data.data1.data);
+	const dateObj = getBefore4Day();
+
+	const irrDate = dateObj.filter((item) => !irrDateObj.includes(item));
+
+	const irr1 = irrDate.length > 3 ? irrDate[3] : 0;
+	const irr2 = irrDate.length > 2 ? irrDate[2] : 0;
+	const irr3 = irrDate.length > 1 ? irrDate[1] : 0;
+	const irr4 = irrDate.length > 0 ? irrDate[0] : 0;
 </script>
 
 <svelte:head>

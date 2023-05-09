@@ -57,6 +57,19 @@ export const formatTanggal = (format) => {
 	// 2023-02-21
 };
 
+export const formatTanggalObject = (data) => {
+	const result = data.map((item) => {
+	  const dateStr = item.tanggal;
+	  const dateObj = new Date(dateStr);
+	  const year = dateObj.getFullYear();
+	  const month = ('0' + (dateObj.getMonth() + 1)).slice(-2);
+	  const day = ('0' + dateObj.getDate()).slice(-2);
+	  return `${year}-${month}-${day}`;
+	});
+	return result;
+	// [ '2023-05-09', '2023-05-08' ]
+  };
+
 export const yearMonthNow = () => {
 	const date = new Date();
 	const year = date.getFullYear();
@@ -85,4 +98,7 @@ export const getBefore4Day = () => {
 		dateArray.push(date.toISOString().slice(0, 10));
 	}
 	return dateArray;
+	// [ '2023-05-09', '2023-05-08', '2023-05-07', '2023-05-06' ]
 };
+
+

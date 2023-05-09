@@ -14,6 +14,8 @@
 	const pv = data.data4.data;
 	const bss = data.data5.data;
 
+	console.log(pltd)
+
 </script>
 
 <Forecast day={today} {irradiance} {weather} {temperature} {humidity} {wind} {pltd} {pv} {bss} />

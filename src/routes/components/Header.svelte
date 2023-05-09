@@ -46,16 +46,20 @@
 							class="list-group-item list-group-item-action bg-transparent text-light border-0"
 							>ROM BSS tanggal 12 Mei 2023 belum diinput</a
 						>
-						<a
-							href="/input/data-irradiance"
-							class="list-group-item list-group-item-action bg-transparent text-light border-0"
-							>Data irradiance tanggal {date2(irr1)} belum diinput</a
-						>
-						<a
-							href="/input/data-irradiance"
-							class="list-group-item list-group-item-action bg-transparent text-light border-0"
-							>Data irradiance tanggal {date2(irr2)} belum diinput</a
-						>
+						{#if irr1 !== 0}
+							<a
+								href="/input/data-irradiance"
+								class="list-group-item list-group-item-action bg-transparent text-light border-0"
+								>Data irradiance tanggal {date2(irr1)} belum diinput</a
+							>
+						{/if}
+						{#if irr2 !== 0}
+							<a
+								href="/input/data-irradiance"
+								class="list-group-item list-group-item-action bg-transparent text-light border-0"
+								>Data irradiance tanggal {date2(irr2)} belum diinput</a
+							>
+						{/if}
 						{#if irr3 !== 0}
 							<a
 								href="/input/data-irradiance"
