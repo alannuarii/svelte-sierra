@@ -172,7 +172,7 @@
 				</div>
 				<div class="col-4">
 					<div class="border shadow mb-1">
-						<h3 class="text-center py-3 bg-secondary text-light">Prediksi Cuaca</h3>
+						<h3 class="text-center py-3 bg-secondary text-light">Prediksi Cuaca Hari Ini</h3>
 						<div class="d-flex flex-column justify-content-center align-items-center">
 							<Weather {weather} />
 						</div>
