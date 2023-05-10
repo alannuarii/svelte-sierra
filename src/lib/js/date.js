@@ -31,6 +31,19 @@ export const date2 = (tanggal) => {
 	// 6 Mei 2023
 };
 
+export const date3 = (tanggal) => {
+	const parsedDate = new Date(tanggal);
+	const formattedDate = `${parsedDate.getDate().toString().padStart(2, '0')}-${(
+		parsedDate.getMonth() + 1
+	)
+		.toString()
+		.padStart(2, '0')}-${parsedDate.getFullYear()}`;
+
+	return formattedDate;
+
+	// convert from Fri, 05 May 2023 00:00:00 GMT to 05-05-2023
+};
+
 export const getToday = () => {
 	let tomorrow = new Date();
 	tomorrow.setHours(tomorrow.getHours() + 8);
@@ -137,4 +150,3 @@ export const getFriday = () => {
 	return nextFridayDate;
 	// 2023-05-11
 };
-
