@@ -46,11 +46,11 @@
 				</div>
 			</div>
 		</li>
-		<!-- <li class="nav-item">
-			<a href="/forecast" class="nav-link py-3 text-secondary" aria-current="page"
-				><i class="bi-record-circle text-primary p-1 me-2" /> Forecast
+		<li class="nav-item">
+			<a href="/rom" class="nav-link py-3 text-secondary" aria-current="page"
+				><i class="bi-calendar-week text-primary p-1 me-2" /> ROM
 			</a>
-		</li> -->
+		</li>
 		<li class="nav-item">
 			<div
 				class="nav-link py-3 text-secondary"
