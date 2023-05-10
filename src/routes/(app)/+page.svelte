@@ -51,7 +51,7 @@
 				<div class="col-8">
 					<div><Timer /></div>
 					<div class="border shadow py-3">
-						<h5 class="mb-1">Mode Operasi</h5>
+						<h5 class="mb-1">Mode Operasi Hari Ini</h5>
 						<h2 class="">{mode}</h2>
 						<a href="/forecast/today" class="btn btn-sm btn-dark mt-2"
 							><span class="badge"><i class="bi-arrow-right-circle me-1" /> Detail</span></a
@@ -65,7 +65,7 @@
 			<div class="row gx-5">
 				<div class="col-8">
 					<div class="row border shadow status">
-						<h3 class="text-center py-3 bg-secondary text-light">Status</h3>
+						<h3 class="text-center py-3 bg-secondary text-light">Status Peralatan</h3>
 						<div class="col-2 d-flex justify-content-end py-5">
 							<div class="d-flex flex-column justify-content-center">
 								{#if engine6 === 1}
@@ -167,6 +167,11 @@
 									</div>
 								{/if}
 							</div>
+						</div>
+						<div>
+							<a href="/rom" class="btn btn-sm btn-dark mb-3"
+								><span class="badge"><i class="bi-arrow-right-circle me-1" /> Detail</span></a
+							>
 						</div>
 					</div>
 				</div>

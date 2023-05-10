@@ -18,61 +18,61 @@
 				<th scope="row">Engine 6</th>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
-                <td>Pemeliharaan</td>
+				<td>Stand by</td>
+				<td>Stand by</td>
+                <td>Stand by</td>
 			</tr>
 			<tr class='align-middle'>
 				<th scope="row">Engine 7</th>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
-                <td>Pemeliharaan</td>
+				<td>Stand by</td>
+				<td>Stand by</td>
+                <td>Stand by</td>
 			</tr>
 			<tr class='align-middle'>
 				<th scope="row">PV 1</th>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
-                <td>Pemeliharaan</td>
+				<td>Stand by</td>
+				<td>Stand by</td>
+                <td>Stand by</td>
 			</tr>
 			<tr class='align-middle'>
 				<th scope="row">PV 2</th>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
-                <td>Pemeliharaan</td>
+				<td>Stand by</td>
+				<td>Stand by</td>
+                <td>Stand by</td>
 			</tr>
 			<tr class='align-middle'>
 				<th scope="row">BSS 1</th>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
-                <td>Pemeliharaan</td>
+				<td>Stand by</td>
+				<td>Stand by</td>
+                <td>Stand by</td>
 			</tr>
 			<tr class='align-middle'>
 				<th scope="row">BSS 2</th>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
 				<td>Stand by</td>
 				<td>Stand by</td>
-				<td>Pemeliharaan</td>
-                <td>Pemeliharaan</td>
+				<td>Stand by</td>
+				<td>Stand by</td>
+                <td>Stand by</td>
 			</tr>
 		</tbody>
 	</table>
