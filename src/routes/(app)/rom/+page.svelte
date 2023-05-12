@@ -87,8 +87,8 @@
 			<tr class="align-middle">
 				<th scope="row">PV 2</th>
 				{#each pv2 as p2}
-				<td>{p2}</td>
-			{/each}
+					<td>{p2}</td>
+				{/each}
 			</tr>
 			<tr class="align-middle">
 				<th scope="row">BSS 1</th>
@@ -99,8 +99,8 @@
 			<tr class="align-middle">
 				<th scope="row">BSS 2</th>
 				{#each bss2 as b2}
-				<td>{b2}</td>
-			{/each}
+					<td>{b2}</td>
+				{/each}
 			</tr>
 		</tbody>
 	</table>

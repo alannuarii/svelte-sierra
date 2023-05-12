@@ -47,6 +47,24 @@
 			}
 		]
 	};
+	const options = {
+		scales: {
+			x: {
+				display: true,
+				title: {
+					display: true,
+					text: 'Waktu (Pukul)'
+				}
+			},
+			y: {
+				display: true,
+				title: {
+					display: true,
+					text: 'Prediksi Irradiance (kW)'
+				}
+			}
+		}
+	};
 </script>
 
-<Line data={dataChart} options={{ responsive: true }} />
+<Line data={dataChart} {options} />

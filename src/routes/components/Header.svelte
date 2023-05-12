@@ -18,6 +18,10 @@
 	if (getThursday() === getToday()) {
 		thursday = true;
 	}
+
+	const reload = () => {
+		location.reload();
+	};
 </script>
 
 <nav class="navbar bg-light-subtle shadow">
@@ -25,8 +29,16 @@
 		<a class="navbar-brand text-dark ms-3 d-flex align-items-center" href="/"
 			>S I E R R A<span class="ms-2">| Sangihe Solar Irradiance Forecaster</span></a
 		>
+		<div class="ms-auto me-4 reload">
+			<button
+				on:click={reload}
+				data-bs-toggle="tooltip"
+				data-bs-placement="bottom"
+				data-bs-title="Reload"><i class="bi-arrow-clockwise" /></button
+			>
+		</div>
 		{#if login}
-			<div class="dropdown-center ms-auto me-4">
+			<div class="dropdown-center me-4">
 				<i
 					class="bi-bell-fill notif position-relative"
 					data-bs-toggle="dropdown"
@@ -145,7 +157,8 @@
 		border-radius: 0px;
 		width: 100px;
 	}
-	.notif {
+	.notif,
+	.reload {
 		font-size: 27px;
 		cursor: pointer;
 	}
@@ -164,5 +177,14 @@
 	}
 	.notif-menu a:hover {
 		color: #0d6efd !important;
+	}
+	button {
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0;
+		font: inherit;
+		cursor: pointer;
+		outline: inherit;
 	}
 </style>
