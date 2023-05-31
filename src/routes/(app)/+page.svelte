@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import Timer from '../components/Timer.svelte';
 	import icon from '../../lib/img/icon.png';
 	import pltdOn from '../../lib/img/status/pltd-on.png';
@@ -218,4 +218,5 @@
 		margin: 0px;
 		font-size: 20px;
 	}
-</style>
+</style> -->
+<h1>Under Maintenance</h1>
