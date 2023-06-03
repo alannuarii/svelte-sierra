@@ -27,7 +27,7 @@
 <nav class="navbar bg-light-subtle shadow">
 	<div class="container-fluid">
 		<a class="navbar-brand text-dark ms-3 d-flex align-items-center" href="/"
-			>S I E R R A<span class="ms-2">| Sangihe Solar Irradiance Forecaster</span></a
+			>M O M A<span class="ms-2">| Machine Learning Based Operation Mode Decision-Making Software</span></a
 		>
 		<div class="ms-auto me-4 reload">
 			<button

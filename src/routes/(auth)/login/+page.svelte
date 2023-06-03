@@ -8,7 +8,7 @@
 	>
 		<div class="icon d-flex justify-content-center align-items-center mb-3">
 			<img src={icon} alt="" />
-			<h3>SIERRA</h3>
+			<h3 class="ms-2">MOMA</h3>
 		</div>
 		<form method="POST">
 			<div class="input-group mb-1">

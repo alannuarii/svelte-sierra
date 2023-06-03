@@ -52,14 +52,14 @@
 					<div><Timer /></div>
 					<div class="border shadow py-3">
 						<h5 class="mb-1">Mode Operasi Hari Ini</h5>
-						<h2 class="">{mode}</h2>
+						<h2>{mode}</h2>
 						<a href="/forecast/today" class="btn btn-sm btn-dark mt-2"
 							><span class="badge"><i class="bi-arrow-right-circle me-1" /> Detail</span></a
 						>
 					</div>
 				</div>
-				<div class="col-4 d-flex justify-content-center align-items-center">
-					<img src={icon} alt="" />
+				<div class="col-4">
+					<img src={icon} alt="" class="icon" height="210px" />
 				</div>
 			</div>
 			<div class="row gx-5">

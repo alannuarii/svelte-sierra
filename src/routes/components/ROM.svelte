@@ -1,4 +1,6 @@
 <script>
+	import { checkFriday } from '../../lib/js/date';
+
 	export let unit;
 	export let unit1;
 	export let unit2;
@@ -9,6 +11,7 @@
 	let dates = [];
 	let jumat;
 	let end;
+	let checkJumat = false;
 
 	const get7day = (event) => {
 		let friday = new Date(event.target.value);
@@ -22,6 +25,8 @@
 			friday.setDate(friday.getDate() + 1);
 		}
 	};
+
+	$: checkJumat = checkFriday(jumat);
 </script>
 
 <section>
@@ -45,6 +50,7 @@
 							on:change={get7day}
 							bind:value={jumat}
 						/>
+						<p class="text-danger mt-1 {checkJumat ? 'd-none' : 'd-block'}">Tanggal harus Jumat!</p>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -153,7 +159,7 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center">
-				<button class="btn btn-primary w-50" type="submit" disabled={!jumat}>Submit</button>
+				<button class="btn btn-primary w-50" type="submit" disabled={!checkJumat}>Submit</button>
 			</div>
 		</div>
 	</form>

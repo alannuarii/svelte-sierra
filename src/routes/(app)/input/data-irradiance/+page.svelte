@@ -3,6 +3,8 @@
 	export let data;
 	let dates = data.data;
 	let fourDays = getBefore4Day();
+	let checkFileUpload = false;
+
 	const savedData = dates.map((obj) => {
 		const tanggalObj = new Date(obj.tanggal);
 		return tanggalObj.toLocaleDateString('id-ID', {
@@ -19,6 +21,15 @@
 			year: 'numeric'
 		});
 	});
+
+	const handleFileUpload = (event) => {
+		const check = event.target.files[0].type;
+		if (check === 'text/csv') {
+			checkFileUpload = true;
+		} else {
+			checkFileUpload = false;
+		}
+	};
 </script>
 
 <section>
@@ -32,7 +43,7 @@
 				>
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Tanggal</label>
-					<input type="date" class="form-control" id="exampleFormControlInput1" name="tanggal" />
+					<input type="date" class="form-control" id="exampleFormControlInput1" name="tanggal" required />
 					<div class="d-flex flex-wrap justify-content-evenly mt-2">
 						{#each arrayDays as day}
 							<p class="tanggal">
@@ -48,7 +59,7 @@
 				</div>
 				<div class="mb-4">
 					<label for="exampleFormControlInput2" class="form-label">Upload File</label>
-					<input type="file" class="form-control" name="irradiance" />
+					<input type="file" class="form-control" name="irradiance" on:change={handleFileUpload} />
 				</div>
 				<div>
 					<p class="mb-2">Keterangan:</p>
@@ -58,7 +69,8 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center">
-				<button class="btn btn-primary w-50" type="submit">Submit</button>
+				<button class="btn btn-primary w-50" type="submit" disabled={!checkFileUpload}>Submit</button
+				>
 			</div>
 		</div>
 	</form>

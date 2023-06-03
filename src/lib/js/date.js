@@ -150,3 +150,14 @@ export const getFriday = () => {
 	return nextFridayDate;
 	// 2023-05-11
 };
+
+export const checkFriday = (friday) => {
+	const date = new Date(friday);
+
+	// Memeriksa apakah hari dalam objek Date adalah Jumat (nilai 5)
+	if (date.getDay() === 5) {
+		return true; // Jika hari adalah Jumat, kembalikan true
+	} else {
+		return false; // Jika bukan hari Jumat, kembalikan false
+	}
+};
