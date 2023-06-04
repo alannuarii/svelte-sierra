@@ -23,7 +23,7 @@
 		<p>{wind} knot</p>
 	</div>
 </div>
-<div class="source mt-2 text-center">
+<div class="source mt-1 text-center">
 	<a href="https://bmkg.go.id/" class="fst-italic text-reset">Source: bmkg.go.id</a>
 </div>
 

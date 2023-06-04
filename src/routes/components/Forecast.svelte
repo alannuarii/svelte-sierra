@@ -40,7 +40,7 @@
 </script>
 
 <section>
-	<div class="mb-4 text-center">
+	<div class="mb-3 text-center">
 		<h1>REKOMENDASI MODE OPERASI</h1>
 		<h2>{date(day)}</h2>
 	</div>
