@@ -8,17 +8,17 @@
 
 <div class="d-flex justify-content-evenly align-content-center">
 	<div class="text-center">
-		<h6 class="mb-1 bg-secondary text-light p-1">Suhu Udara</h6>
+		<h6 class="mb-1 p-1">Suhu Udara</h6>
 		<i class="bi-thermometer-half" />
 		<p>{temperature} {satuan}</p>
 	</div>
 	<div class="text-center">
-		<h6 class="mb-1 bg-secondary text-light p-1">Kelembaban Udara</h6>
+		<h6 class="mb-1 p-1">Kelembaban Udara</h6>
 		<i class="bi-droplet-half" />
 		<p>{humidity} %</p>
 	</div>
 	<div class="text-center">
-		<h6 class="mb-1 bg-secondary text-light p-1">Kecepatan Angin</h6>
+		<h6 class="mb-1 p-1">Kecepatan Angin</h6>
 		<i class="bi-wind" />
 		<p>{wind} knot</p>
 	</div>
@@ -34,6 +34,8 @@
 	h6 {
 		margin: 0px;
 		font-size: 13px;
+		background-color: #43a6a3;
+		color: #ffffff;
 	}
 	i {
 		font-size: 30px;

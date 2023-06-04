@@ -10,7 +10,7 @@ export const load = async (params) => {
 
 	const today = getToday();
 
-	const res1 = await fetch(`${API_ENDPOINT}/irradiance/${today}`);
+	const res1 = await fetch(`${API_ENDPOINT}/forcast-today/${today}`);
 	data1 = res1.json();
 
 	const res2 = await fetch(`${API_ENDPOINT}/weather-today`);

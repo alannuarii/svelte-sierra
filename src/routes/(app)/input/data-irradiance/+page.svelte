@@ -37,13 +37,19 @@
 		<div class="offset-3 col-lg-6">
 			<h1 class="mb-2 text-center">DATA IRRADIANCE</h1>
 			<h3 class="mb-4 text-center">PLTS Sangihe</h3>
-			<div class="row mb-3  border p-4">
+			<div class="row mb-3 border p-4">
 				<label for="inputEmail4" class="form-label text-center mb-2"
-					><span class="badge text-bg-secondary p-2">Input Data Irradiance</span></label
+					><span class="badge p-2">Input Data Irradiance</span></label
 				>
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Tanggal</label>
-					<input type="date" class="form-control" id="exampleFormControlInput1" name="tanggal" required />
+					<input
+						type="date"
+						class="form-control"
+						id="exampleFormControlInput1"
+						name="tanggal"
+						required
+					/>
 					<div class="d-flex flex-wrap justify-content-evenly mt-2">
 						{#each arrayDays as day}
 							<p class="tanggal">
@@ -69,8 +75,7 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center">
-				<button class="btn btn-primary w-50" type="submit" disabled={!checkFileUpload}>Submit</button
-				>
+				<button class="btn w-50 text-light" type="submit" disabled={!checkFileUpload}>Submit</button>
 			</div>
 		</div>
 	</form>
@@ -84,6 +89,7 @@
 	h3 {
 		font-weight: 500;
 		margin: 0px;
+		color: #43a6a3;
 	}
 	button {
 		border-radius: 0px;
@@ -95,6 +101,9 @@
 	span {
 		font-size: 17px;
 		border-radius: 0px;
+		background-color: #43a6a3;
+		color: #ffffff;
+		font-weight: 500;
 	}
 	p {
 		margin: 0px;
@@ -102,5 +111,12 @@
 	.tanggal {
 		margin: 0px;
 		font-size: 13px;
+	}
+	.btn {
+		background-color: #43a6a3;
+		border-color: transparent;
+	}
+	.btn:hover {
+		background-color: #43a6a3df;
 	}
 </style>

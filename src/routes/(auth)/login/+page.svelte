@@ -12,7 +12,7 @@
 		</div>
 		<form method="POST">
 			<div class="input-group mb-1">
-				<span class="input-group-text bg-dark text-light"><i class="bi-person-circle" /></span>
+				<span class="input-group-text text-light"><i class="bi-person-circle" /></span>
 				<div class="form-floating">
 					<input
 						type="email"
@@ -25,7 +25,7 @@
 				</div>
 			</div>
 			<div class="input-group">
-				<span class="input-group-text bg-dark text-light"><i class="bi-key" /></span>
+				<span class="input-group-text text-light"><i class="bi-key" /></span>
 				<div class="form-floating">
 					<input
 						type="password"
@@ -39,7 +39,7 @@
 			</div>
 			<div class="mt-3 d-flex justify-content-center">
 				<button class="btn btn-outline-secondary w-50" type="reset">Reset</button>
-				<button class="btn btn-primary w-50" type="submit">Login</button>
+				<button class="btn btn-login w-50 text-light" type="submit">Login</button>
 			</div>
 		</form>
 	</div>
@@ -72,5 +72,14 @@
 	}
 	.icon {
 		margin-top: -12px;
+	}
+	.btn-login{
+		background-color: #43A6A3;
+	}
+	.btn-login:hover{
+		background-color: #43a6a3df;
+	}
+	span{
+		background-color: #43A6A3;
 	}
 </style>

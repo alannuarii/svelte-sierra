@@ -37,7 +37,7 @@
 			<h3 class="mb-4 text-center">{unit}</h3>
 			<div class="row mb-3 text-center border pt-2">
 				<label for="inputEmail4" class="form-label mb-2"
-					><span class="badge text-bg-secondary p-2">PERIODE ROM</span></label
+					><span class="badge p-2">PERIODE ROM</span></label
 				>
 				<div class="col-lg-6">
 					<div class="mb-3">
@@ -70,7 +70,7 @@
 				<div class="col-lg-6 border px-5 pt-4 pb-3">
 					<div class="text-center">
 						<label for="inputEmail4" class="form-label mb-4"
-							><span class="badge text-bg-secondary p-2">{unit1}</span></label
+							><span class="badge p-2">{unit1}</span></label
 						>
 					</div>
 					{#each days1 as day, i}
@@ -83,7 +83,7 @@
 									<p class:d-none={!dates.length}>{dates[i]}</p>
 								</div>
 								<div
-									class="col-lg py-2 d-flex justify-content-evenly align-items-center border bg-secondary text-light"
+									class="col-lg py-2 d-flex justify-content-evenly align-items-center border bg-secondary-subtle border-dark-subtle"
 								>
 									<div class="form-check me-4">
 										<input
@@ -115,7 +115,7 @@
 				<div class="col-lg-6 border px-5 pt-4 pb-3">
 					<div class="text-center">
 						<label for="inputEmail4" class="form-label mb-4"
-							><span class="badge text-bg-secondary p-2">{unit2}</span></label
+							><span class="badge p-2">{unit2}</span></label
 						>
 					</div>
 					{#each days2 as day, i}
@@ -128,7 +128,7 @@
 									<p class:d-none={!dates.length}>{dates[i]}</p>
 								</div>
 								<div
-									class="col-lg py-2 d-flex justify-content-evenly align-items-center border bg-secondary text-light"
+									class="col-lg py-2 d-flex justify-content-evenly align-items-center border bg-secondary-subtle border-dark-subtle"
 								>
 									<div class="form-check me-4">
 										<input
@@ -159,7 +159,7 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center">
-				<button class="btn btn-primary w-50" type="submit" disabled={!checkJumat}>Submit</button>
+				<button class="btn w-50 text-light" type="submit" disabled={!checkJumat}>Submit</button>
 			</div>
 		</div>
 	</form>
@@ -173,6 +173,7 @@
 	h3 {
 		font-weight: 500;
 		margin: 0px;
+		color: #43a6a3;
 	}
 	button {
 		border-radius: 0px;
@@ -182,11 +183,21 @@
 		font-weight: 500;
 	}
 	span {
-		font-size: 18px;
+		font-size: 17px;
 		border-radius: 0px;
+		background-color: #43a6a3;
+		color: #ffffff;
+		font-weight: 500;
 	}
 	p {
 		margin: 0px;
 		font-size: 10px;
+	}
+	.btn {
+		background-color: #43a6a3;
+		border-color: transparent;
+	}
+	.btn:hover {
+		background-color: #43a6a3df;
 	}
 </style>

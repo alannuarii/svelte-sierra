@@ -7,33 +7,36 @@
 	import { averageIrradiance } from '../../lib/js/avgIrr';
 	import Parameter from './Parameter.svelte';
 
+	export let prediction
+	export let arrayIrradiance
+
 	export let day;
-	export let irradiance;
+	// export let irradiance;
 	export let weather;
 	export let temperature;
 	export let humidity;
 	export let wind;
-	export let pltd;
-	export let pv;
-	export let bss;
+	// export let pltd;
+	// export let pv;
+	// export let bss;
 
-	const totalPLTD = pltd[0].status + pltd[1].status;
-	const totalPV = pv[0].status + pv[1].status;
-	const totalBSS = bss[0].status + bss[1].status;
-	let cuaca;
-	let maxIrradiance;
+	// const totalPLTD = pltd[0].status + pltd[1].status;
+	// const totalPV = pv[0].status + pv[1].status;
+	// const totalBSS = bss[0].status + bss[1].status;
+	// let cuaca;
+	// let maxIrradiance;
 
-	if (parseInt(weather) === 0 || parseInt(weather) === 1 || parseInt(weather) === 2) {
-		cuaca = 1;
-	} else {
-		cuaca = 0;
-	}
+	// if (parseInt(weather) === 0 || parseInt(weather) === 1 || parseInt(weather) === 2) {
+	// 	cuaca = 1;
+	// } else {
+	// 	cuaca = 0;
+	// }
 
-	const average = averageIrradiance(irradiance);
-	const arrayIrradiance = Object.values(average);
-	maxIrradiance = Math.max(...arrayIrradiance);
+	// const average = averageIrradiance(irradiance);
+	// const arrayIrradiance = Object.values(average);
+	// maxIrradiance = Math.max(...arrayIrradiance);
 
-	const mode = modeOperasi(totalPLTD, totalPV, totalBSS, cuaca, maxIrradiance);
+	// const mode = modeOperasi(totalPLTD, totalPV, totalBSS, cuaca, maxIrradiance);
 </script>
 
 <section>
@@ -46,17 +49,17 @@
 			<div class="mb-3">
 				<label for="exampleFormControlInput1" class="form-label">Mode Operasi</label>
 				<div class="row">
-					<div class="col-8"><input type="text" class="form-control" value={mode} disabled /></div>
+					<div class="col-8"><input type="text" class="form-control" value={prediction} disabled /></div>
 					<div class="col-4">
-						<button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalSOP"
+						<button class="btn text-light" data-bs-toggle="modal" data-bs-target="#modalSOP"
 							>Lihat SOP</button
 						>
 					</div>
-					<ModalSop {mode} />
+					<ModalSop {prediction} />
 				</div>
 			</div>
 			<div class="mt-4 border mb-3">
-				<h6 class="text-center p-2 bg-secondary text-light">Prediksi Cuaca</h6>
+				<h6 class="text-center p-3">Prediksi Cuaca</h6>
 				<div class="d-flex flex-column justify-content-center align-items-center">
 					<Weather {weather} />
 				</div>
@@ -64,17 +67,31 @@
 			<Parameter {temperature} {humidity} {wind} />
 		</div>
 		<div class="col-lg-8 text-center">
-			<IrradianceChart {irradiance} />
+			<IrradianceChart {arrayIrradiance} />
 		</div>
 	</div>
 </section>
 
 <style>
+	h1{
+		font-weight: 300;
+	}
+	h2{
+		color: #43A6A3;
+	}
 	h6 {
 		margin: 0px;
+		background-color: #43a6a3;
+		color: #ffffff;
 	}
 	button,
 	input {
 		border-radius: 0px;
+	}
+	.btn{
+		background-color: #43A6A3;
+	}
+	.btn:hover{
+		background-color: #43a6a3df;
 	}
 </style>

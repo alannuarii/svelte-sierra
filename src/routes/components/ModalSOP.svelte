@@ -12,7 +12,7 @@
 	import mode11 from '../../lib/pdf/2PV-2BSS-2ENGINE.pdf';
 	import mode12 from '../../lib/pdf/2PV-2ENGINE.pdf';
 
-	export let mode;
+	export let prediction;
 	let modepdf;
 
 	const modeOps = [
@@ -30,7 +30,7 @@
 		{ mod: '2PV-2ENGINE', pdf: mode12 }
 	];
 
-	const modeObj = modeOps.find((obj) => obj.mod === mode);
+	const modeObj = modeOps.find((obj) => obj.mod === prediction);
 	if (modeObj) {
 		modepdf = modeObj.pdf;
 	}

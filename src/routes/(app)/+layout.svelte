@@ -1,7 +1,7 @@
 <script>
 	import Sidebar from '../components/Sidebar.svelte';
 	import Header from '../components/Header.svelte';
-	import { formatTanggalObject, getBefore4Day} from '../../lib/js/date';
+	import { formatTanggalObject, getBefore4Day } from '../../lib/js/date';
 
 	export let data;
 	const status = data.token;
@@ -18,8 +18,8 @@
 </script>
 
 <svelte:head>
-	<title>SIERRA</title>
-	<meta name="description" content="SIERRA" />
+	<title>MOMA</title>
+	<meta name="description" content="MOMA" />
 </svelte:head>
 
 <main>

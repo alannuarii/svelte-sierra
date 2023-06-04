@@ -23,25 +23,25 @@
 	const pv2 = data.data4.data[1].status;
 	const bss1 = data.data5.data[0].status;
 	const bss2 = data.data5.data[1].status;
-	const irradiance = data.data1.data;
+	const prediction = data.data1.data;
 
-	const totalPLTD = engine6 + engine7;
-	const totalPV = pv1 + pv2;
-	const totalBSS = bss1 + bss2;
-	let cuaca;
-	let maxIrradiance;
+	// const totalPLTD = engine6 + engine7;
+	// const totalPV = pv1 + pv2;
+	// const totalBSS = bss1 + bss2;
+	// let cuaca;
+	// let maxIrradiance;
 
-	if (parseInt(weather) === 0 || parseInt(weather) === 1 || parseInt(weather) === 2) {
-		cuaca = 1;
-	} else {
-		cuaca = 0;
-	}
+	// if (parseInt(weather) === 0 || parseInt(weather) === 1 || parseInt(weather) === 2) {
+	// 	cuaca = 1;
+	// } else {
+	// 	cuaca = 0;
+	// }
 
-	const average = averageIrradiance(irradiance);
-	const arrayIrradiance = Object.values(average);
-	maxIrradiance = Math.max(...arrayIrradiance);
+	// const average = averageIrradiance(irradiance);
+	// const arrayIrradiance = Object.values(average);
+	// maxIrradiance = Math.max(...arrayIrradiance);
 
-	const mode = modeOperasi(totalPLTD, totalPV, totalBSS, cuaca, maxIrradiance);
+	// const mode = modeOperasi(totalPLTD, totalPV, totalBSS, cuaca, maxIrradiance);
 </script>
 
 <section>
@@ -52,116 +52,116 @@
 					<div><Timer /></div>
 					<div class="border shadow py-3">
 						<h5 class="mb-1">Mode Operasi Hari Ini</h5>
-						<h2>{mode}</h2>
-						<a href="/forecast/today" class="btn btn-sm btn-dark mt-2"
+						<h2>{prediction}</h2>
+						<a href="/forecast/today" class="btn btn-sm mt-2"
 							><span class="badge"><i class="bi-arrow-right-circle me-1" /> Detail</span></a
 						>
 					</div>
 				</div>
-				<div class="col-4">
-					<img src={icon} alt="" class="icon" height="210px" />
+				<div class="col-4 mb-4">
+					<img src={icon} alt="" class="icon"/>
 				</div>
 			</div>
 			<div class="row gx-5">
 				<div class="col-8">
 					<div class="row border shadow status">
-						<h3 class="text-center py-3 bg-secondary text-light">Status Peralatan</h3>
-						<div class="col-2 d-flex justify-content-end py-5">
+						<h3 class="text-center py-3">Status Peralatan Hari Ini</h3>
+						<div class="col-2 d-flex justify-content-end py-4">
 							<div class="d-flex flex-column justify-content-center">
 								{#if engine6 === 1}
 									<img src={pltdOn} alt="" />
-									<div class="bg-success text-light py-1">
+									<div class="on py-2 mt-1">
 										<h6>Engine 6</h6>
 										<p>(Stand by)</p>
 									</div>
 								{:else}
 									<img src={pltdOff} alt="" />
-									<div class="bg-dark text-light py-1">
+									<div class="off py-2 mt-1">
 										<h6>Engine 6</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
 								{/if}
 							</div>
 						</div>
-						<div class="col-2 d-flex justify-content-start py-5">
+						<div class="col-2 d-flex justify-content-start py-4">
 							<div class="d-flex flex-column justify-content-center">
 								{#if engine7 === 1}
 									<img src={pltdOn} alt="" />
-									<div class="bg-success text-light py-1">
+									<div class="on py-2 mt-1">
 										<h6>Engine 7</h6>
 										<p>(Stand by)</p>
 									</div>
 								{:else}
 									<img src={pltdOff} alt="" />
-									<div class="bg-dark text-light py-1">
+									<div class="off py-2 mt-1">
 										<h6>Engine 7</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
 								{/if}
 							</div>
 						</div>
-						<div class="col-2 d-flex justify-content-end py-5">
+						<div class="col-2 d-flex justify-content-end py-4">
 							<div class="d-flex flex-column justify-content-center">
 								{#if pv1 === 1}
 									<img src={pvOn} alt="" />
-									<div class="bg-success text-light py-1">
+									<div class="on py-2 mt-1">
 										<h6>PV 1</h6>
 										<p>(Stand by)</p>
 									</div>
 								{:else}
 									<img src={pvOff} alt="" />
-									<div class="bg-dark text-light py-1">
+									<div class="off py-2 mt-1">
 										<h6>PV 1</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
 								{/if}
 							</div>
 						</div>
-						<div class="col-2 d-flex justify-content-start py-5">
+						<div class="col-2 d-flex justify-content-start py-4">
 							<div class="d-flex flex-column justify-content-center">
 								{#if pv2 === 1}
 									<img src={pvOn} alt="" />
-									<div class="bg-success text-light py-1">
+									<div class="on py-2 mt-1">
 										<h6>PV 2</h6>
 										<p>(Stand by)</p>
 									</div>
 								{:else}
 									<img src={pvOff} alt="" />
-									<div class="bg-dark text-light py-1">
+									<div class="off py-2 mt-1">
 										<h6>PV 2</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
 								{/if}
 							</div>
 						</div>
-						<div class="col-2 d-flex justify-content-end py-5">
+						<div class="col-2 d-flex justify-content-end py-4">
 							<div class="d-flex flex-column justify-content-center">
 								{#if bss1 === 1}
 									<img src={bssOn} alt="" />
-									<div class="bg-success text-light py-1">
+									<div class="on py-2 mt-1">
 										<h6>BSS 1</h6>
 										<p>(Stand by)</p>
 									</div>
 								{:else}
 									<img src={bssOff} alt="" />
-									<div class="bg-dark text-light py-1">
+									<div class="off py-2 mt-1">
 										<h6>BSS 1</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
 								{/if}
 							</div>
 						</div>
-						<div class="col-2 d-flex justify-content-start py-5">
+						<div class="col-2 d-flex justify-content-start py-4">
 							<div class="d-flex flex-column justify-content-center">
 								{#if bss2 === 1}
 									<img src={bssOn} alt="" />
-									<div class="bg-success text-light py-1">
+									<div class="on py-2 mt-1">
 										<h6>BSS 2</h6>
 										<p>(Stand by)</p>
 									</div>
 								{:else}
 									<img src={bssOff} alt="" />
-									<div class="bg-dark text-light py-1">
+									<div class="off py-2 mt-1">
 										<h6>BSS 2</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
@@ -169,7 +169,7 @@
 							</div>
 						</div>
 						<div>
-							<a href="/rom" class="btn btn-sm btn-dark mb-3"
+							<a href="/rom" class="btn btn-sm mb-3"
 								><span class="badge"><i class="bi-arrow-right-circle me-1" /> Detail</span></a
 							>
 						</div>
@@ -177,7 +177,7 @@
 				</div>
 				<div class="col-4">
 					<div class="border shadow mb-1">
-						<h3 class="text-center py-3 bg-secondary text-light">Prediksi Cuaca Hari Ini</h3>
+						<h3 class="text-center py-3">Prediksi Cuaca Hari Ini</h3>
 						<div class="d-flex flex-column justify-content-center align-items-center">
 							<Weather {weather} />
 						</div>
@@ -213,9 +213,33 @@
 	}
 	h2 {
 		font-weight: 700;
+		color: #43A6A3;
 	}
 	h3 {
 		margin: 0px;
 		font-size: 20px;
+		background-color: #43a6a3;
+		color: #ffffff;
+	}
+	.icon{
+		height: 180px
+	}
+	.btn{
+		background-color: #43A6A3;
+	}
+	.btn:hover{
+		background-color: #43a6a3df;
+	}
+	span{
+		font-weight: 400;
+	}
+	.on{
+		background-color: #43A6A3;
+		border-radius: 21px;
+	}
+	.off{
+		background-color: #2f3e46;
+		border-radius: 21px;
+		color: #ffffff;
 	}
 </style>

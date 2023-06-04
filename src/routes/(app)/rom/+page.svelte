@@ -52,7 +52,7 @@
 	<h1 class="mb-4 text-center">RENCANA OPERASI MINGGUAN</h1>
 	<table class="table text-center">
 		<thead>
-			<tr class="align-middle bg-secondary text-light">
+			<tr class="align-middle header">
 				<th scope="col">Unit</th>
 				{#each days as day, i}
 					<th scope="col"
@@ -118,5 +118,9 @@
 	.tanggal {
 		font-size: 12px;
 		font-weight: 400;
+	}
+	.header{
+		background-color: #43a6a3;
+		color: #ffffff;
 	}
 </style>

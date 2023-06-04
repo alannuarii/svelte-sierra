@@ -140,7 +140,7 @@
 		cursor: pointer;
 	}
 	.user:hover {
-		color: #0d6efd !important;
+		color: #43A6A3 !important;
 	}
 	img {
 		height: 40px;

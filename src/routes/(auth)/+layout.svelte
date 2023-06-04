@@ -1,6 +1,6 @@
 <svelte:head>
-	<title>Login | SIERRA</title>
-	<meta name="description" content="SIERRA" />
+	<title>Login | MOMA</title>
+	<meta name="description" content="MOMA" />
 </svelte:head>
 
 <main>
