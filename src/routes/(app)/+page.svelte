@@ -181,7 +181,7 @@
 						<div class="d-flex flex-column justify-content-center align-items-center">
 							<Weather {weather} />
 						</div>
-						<div class="my-3">
+						<div class="my-1">
 							<Parameter {temperature} {humidity} {wind} />
 						</div>
 					</div>
@@ -220,6 +220,7 @@
 		font-size: 20px;
 		background-color: #43a6a3;
 		color: #ffffff;
+		border-bottom: 3px solid #AAC548;
 	}
 	.icon{
 		height: 180px

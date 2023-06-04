@@ -122,5 +122,6 @@
 	.header{
 		background-color: #43a6a3;
 		color: #ffffff;
+		border-bottom: 3px solid #AAC548;
 	}
 </style>

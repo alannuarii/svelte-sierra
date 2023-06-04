@@ -7,8 +7,8 @@
 	import { averageIrradiance } from '../../lib/js/avgIrr';
 	import Parameter from './Parameter.svelte';
 
-	export let prediction
-	export let arrayIrradiance
+	export let prediction;
+	export let arrayIrradiance;
 
 	export let day;
 	// export let irradiance;
@@ -40,7 +40,7 @@
 </script>
 
 <section>
-	<div class="mb-5 text-center">
+	<div class="mb-4 text-center">
 		<h1>REKOMENDASI MODE OPERASI</h1>
 		<h2>{date(day)}</h2>
 	</div>
@@ -49,7 +49,9 @@
 			<div class="mb-3">
 				<label for="exampleFormControlInput1" class="form-label">Mode Operasi</label>
 				<div class="row">
-					<div class="col-8"><input type="text" class="form-control" value={prediction} disabled /></div>
+					<div class="col-8">
+						<input type="text" class="form-control" value={prediction} disabled />
+					</div>
 					<div class="col-4">
 						<button class="btn text-light" data-bs-toggle="modal" data-bs-target="#modalSOP"
 							>Lihat SOP</button
@@ -66,32 +68,33 @@
 			</div>
 			<Parameter {temperature} {humidity} {wind} />
 		</div>
-		<div class="col-lg-8 text-center">
+		<div class="col-lg-8 text-center mt-5">
 			<IrradianceChart {arrayIrradiance} />
 		</div>
 	</div>
 </section>
 
 <style>
-	h1{
+	h1 {
 		font-weight: 300;
 	}
-	h2{
-		color: #43A6A3;
+	h2 {
+		color: #43a6a3;
 	}
 	h6 {
 		margin: 0px;
 		background-color: #43a6a3;
 		color: #ffffff;
+		border-bottom: 3px solid #aac548;
 	}
 	button,
 	input {
 		border-radius: 0px;
 	}
-	.btn{
-		background-color: #43A6A3;
+	.btn {
+		background-color: #43a6a3;
 	}
-	.btn:hover{
+	.btn:hover {
 		background-color: #43a6a3df;
 	}
 </style>
