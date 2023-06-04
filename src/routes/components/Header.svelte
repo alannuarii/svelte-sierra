@@ -27,7 +27,9 @@
 <nav class="navbar bg-light-subtle shadow">
 	<div class="container-fluid">
 		<a class="navbar-brand text-dark ms-3 d-flex align-items-center" href="/"
-			>M O M A<span class="ms-2">| Machine Learning Based Operation Mode Decision-Making Software</span></a
+			>M O M A<span class="ms-2"
+				>| Machine Learning Based Operation Mode Decision-Making Software</span
+			></a
 		>
 		<div class="ms-auto me-4 reload">
 			<button
@@ -44,7 +46,7 @@
 					data-bs-toggle="dropdown"
 					data-bs-display="static"
 				>
-					{#if thursday === false || irr1 !== 0 || irr2 !== 0 || irr3 !== 0 || irr4 !== 0}
+					{#if thursday || irr1 !== 0 || irr2 !== 0 || irr3 !== 0 || irr4 !== 0}
 						<span class="notif-dot bg-danger border border-3 border-light rounded-circle">
 							<span class="visually-hidden">New alerts</span>
 						</span>
@@ -70,7 +72,6 @@
 								>ROM BSS tanggal {date2(getFriday())} belum diinput</a
 							>
 						{/if}
-
 						{#if irr1 !== 0}
 							<a
 								href="/input/data-irradiance"
@@ -97,6 +98,13 @@
 								href="/input/data-irradiance"
 								class="list-group-item list-group-item-action bg-transparent text-light border-0"
 								>Data irradiance tanggal {date2(irr4)} belum diinput</a
+							>
+						{/if}
+						{#if !thursday && irr1 === 0 && irr2 === 0 && irr3 === 0 && irr4 === 0}
+							<a
+								href="/input/data-irradiance"
+								class="list-group-item list-group-item-action disabled bg-transparent text-light border-0"
+								>Tidak ada notifikasi</a
 							>
 						{/if}
 					</div>
@@ -140,7 +148,7 @@
 		cursor: pointer;
 	}
 	.user:hover {
-		color: #43A6A3 !important;
+		color: #43a6a3 !important;
 	}
 	img {
 		height: 40px;
@@ -176,7 +184,7 @@
 		font-size: 10px;
 	}
 	.notif-menu a:hover {
-		color: #0d6efd !important;
+		color: #43a6a3 !important;
 	}
 	button {
 		background: none;
