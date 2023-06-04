@@ -196,10 +196,12 @@
 		margin: 0px;
 		font-weight: 500;
 		font-size: 12px;
+		color: #ffffff;
 	}
 	h6 {
 		margin: 0px;
 		font-size: 15px;
+		color: #ffffff;
 	}
 	.status img {
 		height: 50%;
@@ -227,6 +229,7 @@
 	}
 	.btn{
 		background-color: #43A6A3;
+		border-radius: 0px;
 	}
 	.btn:hover{
 		background-color: #43a6a3df;
