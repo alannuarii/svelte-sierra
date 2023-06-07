@@ -2,7 +2,7 @@ import { getTomorrow } from '../../../../lib/js/date';
 import { API_ENDPOINT } from '../../../../lib/js/endpoint';
 
 export const load = async (params) => {
-	const tomorrow = getTomorrow;
+	const tomorrow = getTomorrow();
 
 	const [res1, res2, res3] = await Promise.all([
 		fetch(`${API_ENDPOINT}/forcast-tomorrow/${tomorrow}`).then((res) => res.json()),
