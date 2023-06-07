@@ -2,34 +2,21 @@ import { getToday } from '../../lib/js/date';
 import { API_ENDPOINT } from '../../lib/js/endpoint';
 
 export const load = async (params) => {
-	let data1;
-	let data2;
-	let data3;
-	let data4;
-	let data5;
+  const today = getToday();
 
-	const today = getToday();
+  const [res1, res2, res3, res4, res5] = await Promise.all([
+    fetch(`${API_ENDPOINT}/forcast-today/${today}`).then(res => res.json()),
+    fetch(`${API_ENDPOINT}/weather-today`).then(res => res.json()),
+    fetch(`${API_ENDPOINT}/rompltd/${today}`).then(res => res.json()),
+    fetch(`${API_ENDPOINT}/rompv/${today}`).then(res => res.json()),
+    fetch(`${API_ENDPOINT}/rombss/${today}`).then(res => res.json())
+  ]);
 
-	const res1 = await fetch(`${API_ENDPOINT}/forcast-today/${today}`);
-	data1 = res1.json();
-
-	const res2 = await fetch(`${API_ENDPOINT}/weather-today`);
-	data2 = res2.json();
-
-	const res3 = await fetch(`${API_ENDPOINT}/rompltd/${today}`);
-	data3 = res3.json();
-
-	const res4 = await fetch(`${API_ENDPOINT}/rompv/${today}`);
-	data4 = res4.json();
-
-	const res5 = await fetch(`${API_ENDPOINT}/rombss/${today}`);
-	data5 = res5.json();
-
-	return {
-		data1,
-		data2,
-		data3,
-		data4,
-		data5
-	};
+  return {
+    data1: await res1,
+    data2: await res2,
+    data3: await res3,
+    data4: await res4,
+    data5: await res5
+  };
 };

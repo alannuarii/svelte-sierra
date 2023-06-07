@@ -19,7 +19,7 @@ export const actions = {
 
 export const load = async () => {
 	const res = await fetch(`${API_ENDPOINT}/irradiance/tanggal`);
-	const data = res.json();
+	const data = await res.json();
 
 	return data;
 };

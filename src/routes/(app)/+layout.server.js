@@ -6,7 +6,7 @@ export const load = async ({ cookies }) => {
 	const decode = jwtDecode(token);
 
 	const res1 = await fetch(`${API_ENDPOINT}/irradiance/tanggal`);
-	const data1 = res1.json();
+	const data1 = await res1.json();
 
 	return {
 		token: decode,
