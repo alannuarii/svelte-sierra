@@ -59,7 +59,7 @@
 					</div>
 				</div>
 				<div class="col-4 mb-4">
-					<img src={icon} alt="" class="icon"/>
+					<img src={icon} alt="" class="icon" />
 				</div>
 			</div>
 			<div class="row gx-5">
@@ -215,33 +215,33 @@
 	}
 	h2 {
 		font-weight: 700;
-		color: #43A6A3;
+		color: #43a6a3;
 	}
 	h3 {
 		margin: 0px;
 		font-size: 20px;
 		background-color: #43a6a3;
 		color: #ffffff;
-		border-bottom: 3px solid #AAC548;
+		border-bottom: 3px solid #aac548;
 	}
-	.icon{
-		height: 180px
+	.icon {
+		height: 180px;
 	}
-	.btn{
-		background-color: #43A6A3;
+	.btn {
+		background-color: #43a6a3;
 		border-radius: 0px;
 	}
-	.btn:hover{
+	.btn:hover {
 		background-color: #43a6a3df;
 	}
-	span{
+	span {
 		font-weight: 400;
 	}
-	.on{
-		background-color: #43A6A3;
+	.on {
+		background-color: #43a6a3;
 		border-radius: 21px;
 	}
-	.off{
+	.off {
 		background-color: #2f3e46;
 		border-radius: 21px;
 		color: #ffffff;

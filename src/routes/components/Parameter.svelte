@@ -39,6 +39,7 @@
 		font-size: 13px;
 		background-color: #43a6a3;
 		color: #ffffff;
+		border-bottom: 2px solid #aac548;
 	}
 	i {
 		font-size: 30px;

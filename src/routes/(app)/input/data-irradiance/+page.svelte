@@ -75,7 +75,8 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center">
-				<button class="btn w-50 text-light" type="submit" disabled={!checkFileUpload}>Submit</button>
+				<button class="btn w-25 text-light" type="submit" disabled={!checkFileUpload}>Submit</button
+				>
 			</div>
 		</div>
 	</form>
@@ -104,6 +105,7 @@
 		background-color: #43a6a3;
 		color: #ffffff;
 		font-weight: 500;
+		border-bottom: 2px solid #aac548;
 	}
 	p {
 		margin: 0px;

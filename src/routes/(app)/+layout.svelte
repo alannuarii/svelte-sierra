@@ -29,7 +29,7 @@
 		</div>
 		<div class="col-lg-10">
 			<Header {status} {irr1} {irr2} {irr3} {irr4} />
-			<div class="content px-5 py-4 bg-body-tertiary">
+			<div class="content px-5 py-4 bg-white">
 				<slot />
 			</div>
 		</div>

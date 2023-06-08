@@ -1,11 +1,11 @@
 <script>
-	import berawan from '../../lib/img/cuaca/berawan-am.png';
-	import berawanTebal from '../../lib/img/cuaca/berawan-tebal-am.png';
-	import cerah from '../../lib/img/cuaca/cerah-am.png';
-	import cerahBerawan from '../../lib/img/cuaca/cerah-berawan-am.png';
-	import hujanLebat from '../../lib/img/cuaca/hujan-lebat-pm.png';
-	import hujanRingan from '../../lib/img/cuaca/hujan-ringan-am.png';
-	import hujanSedang from '../../lib/img/cuaca/hujan-sedang-am.png';
+	import berawan from '../../lib/img/cuaca/berawan.gif';
+	import berawanTebal from '../../lib/img/cuaca/berawan-tebal.gif';
+	import cerah from '../../lib/img/cuaca/cerah.gif';
+	import cerahBerawan from '../../lib/img/cuaca/cerah-berawan.gif';
+	import hujanLebat from '../../lib/img/cuaca/hujan-lebat.gif';
+	import hujanRingan from '../../lib/img/cuaca/hujan-ringan.gif';
+	import hujanSedang from '../../lib/img/cuaca/hujan-sedang.gif';
 	import { weatherCode } from '../../lib/js/weather';
 
 	export let weather;
@@ -42,3 +42,9 @@
 
 <img src={gambar} class="img-fluid py-3" alt="" />
 <h4>{cuaca}</h4>
+
+<style>
+	img {
+		height: 150px;
+	}
+</style>

@@ -35,7 +35,7 @@
 		<div class="col-lg-12">
 			<h1 class="mb-2 text-center">RENCANA OPERASI MINGGUAN</h1>
 			<h3 class="mb-4 text-center">{unit}</h3>
-			<div class="row mb-3 text-center border pt-2">
+			<div class="row mb-3 text-center border pt-3 px-3">
 				<label for="inputEmail4" class="form-label mb-2"
 					><span class="badge p-2">PERIODE ROM</span></label
 				>
@@ -159,7 +159,7 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center">
-				<button class="btn w-50 text-light" type="submit" disabled={!checkJumat}>Submit</button>
+				<button class="btn w-25 text-light" type="submit" disabled={!checkJumat}>Submit</button>
 			</div>
 		</div>
 	</form>
@@ -188,6 +188,7 @@
 		background-color: #43a6a3;
 		color: #ffffff;
 		font-weight: 500;
+		border-bottom: 2px solid #aac548;
 	}
 	p {
 		margin: 0px;

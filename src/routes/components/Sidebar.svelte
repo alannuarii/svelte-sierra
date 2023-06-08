@@ -95,9 +95,7 @@
 			</div>
 		</li>
 	</ul>
-	<div
-		class="powered d-flex flex-column justify-content-center align-items-center py-2"
-	>
+	<div class="powered d-flex flex-column justify-content-center align-items-center py-2">
 		<p class="mb-1">Powered by</p>
 		<img src={pnp} class="img-fluid pnp mb-1" alt="" />
 	</div>
@@ -108,7 +106,7 @@
 		width: 100%;
 		height: 100vh;
 		background-color: #43a6a3;
-		border-right: 5px solid #AAC548;
+		border-right: 5px solid #aac548;
 	}
 	a {
 		text-decoration: none;
