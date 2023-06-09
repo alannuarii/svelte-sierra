@@ -60,7 +60,7 @@
 					<ModalSop {prediction} />
 				</div>
 			</div>
-			<div class="mt-4 border mb-3">
+			<div class="mt-4 border shadow-sm mb-3">
 				<h6 class="text-center p-3">Prediksi Cuaca</h6>
 				<div class="d-flex flex-column justify-content-center align-items-center">
 					<Weather {weather} />
@@ -96,5 +96,8 @@
 	}
 	.btn:hover {
 		background-color: #43a6a3df;
+	}
+	.border{
+		border-radius: 25px;
 	}
 </style>

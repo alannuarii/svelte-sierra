@@ -107,6 +107,7 @@
 		height: 100vh;
 		background-color: #43a6a3;
 		border-right: 5px solid #aac548;
+		border-radius: 0 0 40px 0;
 	}
 	a {
 		text-decoration: none;

@@ -246,4 +246,7 @@
 		border-radius: 21px;
 		color: #ffffff;
 	}
+	.border{
+		border-radius: 25px;
+	}
 </style>

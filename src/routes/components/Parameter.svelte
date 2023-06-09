@@ -1,4 +1,7 @@
 <script>
+	import suhu from '../../lib/img/temperature.gif'
+	import lembab from '../../lib/img/humidity.gif'
+	import angin from '../../lib/img/wind.gif'
 	export let temperature;
 	export let humidity;
 	export let wind;
@@ -9,17 +12,20 @@
 <div class="d-flex justify-content-evenly align-content-center">
 	<div class="text-center">
 		<h6 class="mb-1 p-1">Suhu Udara</h6>
-		<i class="bi-thermometer-half" />
+		<img class="py-1" src="{suhu}" alt="">
+		<!-- <i class="bi-thermometer-half" /> -->
 		<p>{temperature} {satuan}</p>
 	</div>
 	<div class="text-center">
 		<h6 class="mb-1 p-1">Kelembaban Udara</h6>
-		<i class="bi-droplet-half" />
+		<img class="py-1" src="{lembab}" alt="">
+		<!-- <i class="bi-droplet-half" /> -->
 		<p>{humidity} %</p>
 	</div>
 	<div class="text-center">
 		<h6 class="mb-1 p-1">Kecepatan Angin</h6>
-		<i class="bi-wind" />
+		<img class="py-1" src="{angin}" alt="">
+		<!-- <i class="bi-wind" /> -->
 		<p>{wind} knot</p>
 	</div>
 </div>
@@ -41,12 +47,15 @@
 		color: #ffffff;
 		border-bottom: 2px solid #aac548;
 	}
-	i {
+	/* i {
 		font-size: 30px;
-	}
+	} */
 	.source a {
 		font-size: 12px;
 		font-weight: 400;
 		text-decoration: none;
+	}
+	img{
+		width: 40px;
 	}
 </style>
