@@ -1,6 +1,7 @@
 <script>
 	import Timer from '../components/Timer.svelte';
 	import icon from '../../lib/img/icon.png';
+	import moma from '../../lib/img/moma.png';
 	import pltdOn from '../../lib/img/status/pltd-on.png';
 	import pltdOff from '../../lib/img/status/pltd-off.png';
 	import pvOn from '../../lib/img/status/plts-on.png';
@@ -59,7 +60,7 @@
 					</div>
 				</div>
 				<div class="col-4 mb-4">
-					<img src={icon} alt="" class="icon" />
+					<img src={moma} alt="" class="icon" />
 				</div>
 			</div>
 			<div class="row gx-5">
