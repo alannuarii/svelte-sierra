@@ -1,16 +1,16 @@
 <script>
 	import mode1 from '../../lib/pdf/1PV.pdf';
 	import mode2 from '../../lib/pdf/1PV-1BSS.pdf';
-	import mode3 from '../../lib/pdf/1PV-1BSS-1ENGINE.pdf';
-	import mode4 from '../../lib/pdf/1PV-1BSS-2ENGINE.pdf';
+	import mode3 from '../../lib/pdf/1PV-1BSS-1DG.pdf';
+	import mode4 from '../../lib/pdf/1PV-1BSS-2DG.pdf';
 	import mode5 from '../../lib/pdf/1PV-2BSS.pdf';
 	import mode6 from '../../lib/pdf/2PV.pdf';
 	import mode7 from '../../lib/pdf/2PV-1BSS.pdf';
-	import mode8 from '../../lib/pdf/2PV-1BSS-2ENGINE.pdf';
+	import mode8 from '../../lib/pdf/2PV-1BSS-2DG.pdf';
 	import mode9 from '../../lib/pdf/2PV-2BSS.pdf';
-	import mode10 from '../../lib/pdf/2PV-2BSS-1ENGINE.pdf';
-	import mode11 from '../../lib/pdf/2PV-2BSS-2ENGINE.pdf';
-	import mode12 from '../../lib/pdf/2PV-2ENGINE.pdf';
+	import mode10 from '../../lib/pdf/2PV-2BSS-1DG.pdf';
+	import mode11 from '../../lib/pdf/2PV-2BSS-2DG.pdf';
+	import mode12 from '../../lib/pdf/2PV-2DG.pdf';
 
 	export let prediction;
 	let modepdf;
@@ -18,16 +18,16 @@
 	const modeOps = [
 		{ mod: '1PV', pdf: mode1 },
 		{ mod: '1PV-1BSS', pdf: mode2 },
-		{ mod: '1PV-1BSS-1ENGINE', pdf: mode3 },
-		{ mod: '1PV-1BSS-2ENGINE', pdf: mode4 },
+		{ mod: '1PV-1BSS-1DG', pdf: mode3 },
+		{ mod: '1PV-1BSS-2DG', pdf: mode4 },
 		{ mod: '1PV-2BSS', pdf: mode5 },
 		{ mod: '2PV', pdf: mode6 },
 		{ mod: '2PV-1BSS', pdf: mode7 },
-		{ mod: '2PV-1BSS-2ENGINE', pdf: mode8 },
+		{ mod: '2PV-1BSS-2DG', pdf: mode8 },
 		{ mod: '2PV-2BSS', pdf: mode9 },
-		{ mod: '2PV-2BSS-1ENGINE', pdf: mode10 },
-		{ mod: '2PV-2BSS-2ENGINE', pdf: mode11 },
-		{ mod: '2PV-2ENGINE', pdf: mode12 }
+		{ mod: '2PV-2BSS-1DG', pdf: mode10 },
+		{ mod: '2PV-2BSS-2DG', pdf: mode11 },
+		{ mod: '2PV-2DG', pdf: mode12 }
 	];
 
 	const modeObj = modeOps.find((obj) => obj.mod === prediction);
