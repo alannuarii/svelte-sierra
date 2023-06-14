@@ -67,13 +67,13 @@
 		</thead>
 		<tbody>
 			<tr class="align-middle">
-				<th scope="row">Engine 6</th>
+				<th scope="row">DG 6</th>
 				{#each engine6 as e6}
 					<td>{e6}</td>
 				{/each}
 			</tr>
 			<tr class="align-middle">
-				<th scope="row">Engine 7</th>
+				<th scope="row">DG 7</th>
 				{#each engine7 as e7}
 					<td>{e7}</td>
 				{/each}

@@ -72,13 +72,13 @@
 								{#if engine6 === 1}
 									<img src={pltdOn} alt="" />
 									<div class="on py-2 mt-1">
-										<h6>Engine 6</h6>
+										<h6>DG 6</h6>
 										<p>(Stand by)</p>
 									</div>
 								{:else}
 									<img src={pltdOff} alt="" />
 									<div class="off py-2 mt-1">
-										<h6>Engine 6</h6>
+										<h6>DG 6</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
 								{/if}
@@ -89,13 +89,13 @@
 								{#if engine7 === 1}
 									<img src={pltdOn} alt="" />
 									<div class="on py-2 mt-1">
-										<h6>Engine 7</h6>
+										<h6>DG 7</h6>
 										<p>(Stand by)</p>
 									</div>
 								{:else}
 									<img src={pltdOff} alt="" />
 									<div class="off py-2 mt-1">
-										<h6>Engine 7</h6>
+										<h6>DG 7</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
 								{/if}
@@ -247,7 +247,7 @@
 		border-radius: 21px;
 		color: #ffffff;
 	}
-	.border{
+	.border {
 		border-radius: 25px;
 	}
 </style>
