@@ -57,7 +57,7 @@
 				{#each days as day, i}
 					<th scope="col"
 						><div class="d-flex flex-column">
-							<span class="mb-1">{day}</span><span class="tanggal bg-dark-subtle text-dark py-1"
+							<span class="mb-1">{day}</span><span class="tanggal bg-light text-dark py-1"
 								>{dateWeek[i]}</span
 							>
 						</div></th

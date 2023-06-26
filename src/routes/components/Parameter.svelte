@@ -1,7 +1,7 @@
 <script>
-	import suhu from '../../lib/img/temperature.gif'
-	import lembab from '../../lib/img/humidity.gif'
-	import angin from '../../lib/img/wind.gif'
+	import suhu from '../../lib/img/temperature.gif';
+	import lembab from '../../lib/img/humidity.gif';
+	import angin from '../../lib/img/wind.gif';
 	export let temperature;
 	export let humidity;
 	export let wind;
@@ -12,19 +12,19 @@
 <div class="d-flex justify-content-evenly align-content-center">
 	<div class="text-center">
 		<h6 class="mb-1 p-1">Suhu Udara</h6>
-		<img class="py-1" src="{suhu}" alt="">
+		<img class="py-1" src={suhu} alt="" />
 		<!-- <i class="bi-thermometer-half" /> -->
 		<p>{temperature} {satuan}</p>
 	</div>
 	<div class="text-center">
 		<h6 class="mb-1 p-1">Kelembaban Udara</h6>
-		<img class="py-1" src="{lembab}" alt="">
+		<img class="py-1" src={lembab} alt="" />
 		<!-- <i class="bi-droplet-half" /> -->
 		<p>{humidity} %</p>
 	</div>
 	<div class="text-center">
 		<h6 class="mb-1 p-1">Kecepatan Angin</h6>
-		<img class="py-1" src="{angin}" alt="">
+		<img class="py-1" src={angin} alt="" />
 		<!-- <i class="bi-wind" /> -->
 		<p>{wind} knot</p>
 	</div>
@@ -43,9 +43,10 @@
 	h6 {
 		margin: 0px;
 		font-size: 13px;
-		background-color: #43a6a3;
-		color: #ffffff;
-		border-bottom: 2px solid #aac548;
+		color: #43a6a3;
+		font-weight: 600;
+		/* border-bottom: 2px solid #aac548;
+		border-radius: 0 0 15px 0; */
 	}
 	/* i {
 		font-size: 30px;
@@ -55,7 +56,7 @@
 		font-weight: 400;
 		text-decoration: none;
 	}
-	img{
+	img {
 		width: 40px;
 	}
 </style>

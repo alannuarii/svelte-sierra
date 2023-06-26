@@ -197,12 +197,12 @@
 		margin: 0px;
 		font-weight: 500;
 		font-size: 12px;
-		color: #ffffff;
+		color: #2f3e46;
 	}
 	h6 {
 		margin: 0px;
 		font-size: 15px;
-		color: #ffffff;
+		color: #2f3e46;
 	}
 	.status img {
 		height: 50%;
@@ -239,12 +239,12 @@
 		font-weight: 400;
 	}
 	.on {
-		background-color: #43a6a3;
-		border-radius: 21px;
+		border: 5px solid #43a6a3;
+		border-radius: 15px;
 	}
 	.off {
-		background-color: #2f3e46;
-		border-radius: 21px;
+		border: 5px solid #2f3e46;
+		border-radius: 15px;
 		color: #ffffff;
 	}
 	.border {

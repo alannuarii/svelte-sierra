@@ -183,12 +183,9 @@
 		font-weight: 500;
 	}
 	span {
-		font-size: 17px;
-		border-radius: 0px;
-		background-color: #43a6a3;
-		color: #ffffff;
-		font-weight: 500;
-		border-bottom: 2px solid #aac548;
+		font-size: 20px;
+		color: #43a6a3;
+		font-weight: 700;
 	}
 	p {
 		margin: 0px;

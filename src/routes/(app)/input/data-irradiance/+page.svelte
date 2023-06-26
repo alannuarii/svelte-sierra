@@ -39,7 +39,7 @@
 			<h3 class="mb-4 text-center">PLTS Sangihe</h3>
 			<div class="row mb-3 border shadow-sm p-4">
 				<label for="inputEmail4" class="form-label text-center mb-2"
-					><span class="badge p-2">Input Data Irradiance</span></label
+					><span class="badge">Input Data Irradiance</span></label
 				>
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Tanggal</label>
@@ -100,12 +100,9 @@
 		font-weight: 700;
 	}
 	span {
-		font-size: 17px;
-		border-radius: 0px;
-		background-color: #43a6a3;
-		color: #ffffff;
-		font-weight: 500;
-		border-bottom: 2px solid #aac548;
+		font-size: 20px;
+		color: #43a6a3;
+		font-weight: 700;
 	}
 	p {
 		margin: 0px;
@@ -121,7 +118,7 @@
 	.btn:hover {
 		background-color: #43a6a3df;
 	}
-	.border{
+	.border {
 		border-radius: 25px;
 	}
 </style>
