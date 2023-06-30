@@ -14,6 +14,8 @@
 	const bss1 = [];
 	const bss2 = [];
 
+	console.log(rompv);
+
 	const convertStatus = (status) => {
 		if (status === 1) {
 			return 'Stand by';
@@ -68,39 +70,63 @@
 		<tbody>
 			<tr class="align-middle">
 				<th scope="row">DG 6</th>
-				{#each engine6 as e6}
-					<td>{e6}</td>
-				{/each}
+				{#if rompltd.length === 0}
+					<td colspan="7">Data Kosong</td>
+				{:else}
+					{#each engine6 as e6}
+						<td>{e6}</td>
+					{/each}
+				{/if}
 			</tr>
 			<tr class="align-middle">
 				<th scope="row">DG 7</th>
-				{#each engine7 as e7}
-					<td>{e7}</td>
-				{/each}
+				{#if rompltd.length === 0}
+					<td colspan="7">Data Kosong</td>
+				{:else}
+					{#each engine7 as e7}
+						<td>{e7}</td>
+					{/each}
+				{/if}
 			</tr>
 			<tr class="align-middle">
 				<th scope="row">PV 1</th>
-				{#each pv1 as p1}
-					<td>{p1}</td>
-				{/each}
+				{#if rompv.length === 0}
+					<td colspan="7">Data Kosong</td>
+				{:else}
+					{#each pv1 as p1}
+						<td>{p1}</td>
+					{/each}
+				{/if}
 			</tr>
 			<tr class="align-middle">
 				<th scope="row">PV 2</th>
-				{#each pv2 as p2}
-					<td>{p2}</td>
-				{/each}
+				{#if rompv.length === 0}
+					<td colspan="7">Data Kosong</td>
+				{:else}
+					{#each pv2 as p2}
+						<td>{p2}</td>
+					{/each}
+				{/if}
 			</tr>
 			<tr class="align-middle">
 				<th scope="row">BSS 1</th>
-				{#each bss1 as b1}
-					<td>{b1}</td>
-				{/each}
+				{#if rompv.length === 0}
+					<td colspan="7">Data Kosong</td>
+				{:else}
+					{#each bss1 as b1}
+						<td>{b1}</td>
+					{/each}
+				{/if}
 			</tr>
 			<tr class="align-middle">
 				<th scope="row">BSS 2</th>
-				{#each bss2 as b2}
-					<td>{b2}</td>
-				{/each}
+				{#if rompv.length === 0}
+					<td colspan="7">Data Kosong</td>
+				{:else}
+					{#each bss2 as b2}
+						<td>{b2}</td>
+					{/each}
+				{/if}
 			</tr>
 		</tbody>
 	</table>
@@ -119,9 +145,9 @@
 		font-size: 12px;
 		font-weight: 400;
 	}
-	.header{
+	.header {
 		background-color: #43a6a3;
 		color: #ffffff;
-		border-bottom: 3px solid #AAC548;
+		border-bottom: 3px solid #aac548;
 	}
 </style>

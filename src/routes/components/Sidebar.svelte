@@ -42,7 +42,7 @@
 					<a
 						href="/input/data-irradiance"
 						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
-						><i class="bi-lightning-charge" /> Data Irradiance</a
+						><i class="bi-lightning-charge" /> Irradiance</a
 					>
 					<a
 						href="/input/rom-pltd"

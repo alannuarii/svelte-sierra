@@ -27,9 +27,11 @@
 		<div class="col-2 d-none d-lg-block">
 			<Sidebar />
 		</div>
-		<div class="col-lg-10">
-			<Header {status} {irr1} {irr2} {irr3} {irr4} />
-			<div class="content px-5 py-4 bg-white">
+		<div class="col-lg-10 position-relative">
+			<div class="header position-absolute top-0 start-50 translate-middle-x">
+				<Header {status} {irr1} {irr2} {irr3} {irr4} />
+			</div>
+			<div class="content px-5 bg-white">
 				<slot />
 			</div>
 		</div>
@@ -41,8 +43,13 @@
 		overflow-x: hidden;
 	}
 	.content {
-		height: 643px;
+		height: 100vh;
 		overflow-x: hidden;
 		overflow-y: auto;
+		padding-top: 90px;
+		padding-bottom: 30px;
+	}
+	.header {
+		width: 100%;
 	}
 </style>

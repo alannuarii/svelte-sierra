@@ -1,6 +1,5 @@
 <script>
 	import Timer from '../components/Timer.svelte';
-	import icon from '../../lib/img/icon.png';
 	import moma from '../../lib/img/moma.png';
 	import pltdOn from '../../lib/img/status/pltd-on.png';
 	import pltdOff from '../../lib/img/status/pltd-off.png';
@@ -10,39 +9,20 @@
 	import bssOff from '../../lib/img/status/bss-off.png';
 	import Weather from '../components/Weather.svelte';
 	import Parameter from '../components/Parameter.svelte';
-	import { modeOperasi } from '../../lib/js/mode';
-	import { averageIrradiance } from '../../lib/js/avgIrr';
 
 	export let data;
-	const weather = data.data2.data.weather;
-	const temperature = data.data2.data.temperature;
-	const humidity = data.data2.data.humidity;
-	const wind = data.data2.data.wind;
-	const engine6 = data.data3.data[0].status;
-	const engine7 = data.data3.data[1].status;
-	const pv1 = data.data4.data[0].status;
-	const pv2 = data.data4.data[1].status;
-	const bss1 = data.data5.data[0].status;
-	const bss2 = data.data5.data[1].status;
+	const weather = data.data2.data ? data.data2.data.weather : 'data kosong';
+	const temperature = data.data2.data ? data.data2.data.temperature : 'data kosong';
+	const humidity = data.data2.data ? data.data2.data.humidity : 'data kosong';
+	const wind = data.data2.data ? data.data2.data.wind : 'data kosong';
+	const engine6 = data.data3.data.length > 0 ? data.data3.data[0].status : 'data kosong';
+	const engine7 = data.data3.data.length > 0 ? data.data3.data[1].status : 'data kosong';
+	const pv1 = data.data4.data.length > 0 ? data.data4.data[0].status : 'data kosong';
+	const pv2 = data.data4.data.length > 0 ? data.data4.data[1].status : 'data kosong';
+	const bss1 = data.data5.data.length > 0 ? data.data5.data[0].status : 'data kosong';
+	const bss2 = data.data5.data.length > 0 ? data.data5.data[1].status : 'data kosong';
 	const prediction = data.data1.data;
-
-	// const totalPLTD = engine6 + engine7;
-	// const totalPV = pv1 + pv2;
-	// const totalBSS = bss1 + bss2;
-	// let cuaca;
-	// let maxIrradiance;
-
-	// if (parseInt(weather) === 0 || parseInt(weather) === 1 || parseInt(weather) === 2) {
-	// 	cuaca = 1;
-	// } else {
-	// 	cuaca = 0;
-	// }
-
-	// const average = averageIrradiance(irradiance);
-	// const arrayIrradiance = Object.values(average);
-	// maxIrradiance = Math.max(...arrayIrradiance);
-
-	// const mode = modeOperasi(totalPLTD, totalPV, totalBSS, cuaca, maxIrradiance);
+	console.log(engine6);
 </script>
 
 <section>
@@ -75,12 +55,18 @@
 										<h6>DG 6</h6>
 										<p>(Stand by)</p>
 									</div>
-								{:else}
+								{:else if engine6 === 0}
 									<img src={pltdOff} alt="" />
 									<div class="off py-2 mt-1">
 										<h6>DG 6</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
+								{:else}
+									<img src={pltdOff} alt="" />
+									<h6>DG 6</h6>
+									<a href="/input/rom-pltd" class="btn btn-sm mt-3"
+										><span class="badge"><i class="bi-arrow-right-circle me-1" /> Input</span></a
+									>
 								{/if}
 							</div>
 						</div>
@@ -92,12 +78,18 @@
 										<h6>DG 7</h6>
 										<p>(Stand by)</p>
 									</div>
-								{:else}
+								{:else if engine7 === 0}
 									<img src={pltdOff} alt="" />
 									<div class="off py-2 mt-1">
 										<h6>DG 7</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
+								{:else}
+									<img src={pltdOff} alt="" />
+									<h6>DG 7</h6>
+									<a href="/input/rom-pltd" class="btn btn-sm mt-3"
+										><span class="badge"><i class="bi-arrow-right-circle me-1" /> Input</span></a
+									>
 								{/if}
 							</div>
 						</div>
@@ -109,12 +101,18 @@
 										<h6>PV 1</h6>
 										<p>(Stand by)</p>
 									</div>
-								{:else}
+								{:else if pv1 === 0}
 									<img src={pvOff} alt="" />
 									<div class="off py-2 mt-1">
 										<h6>PV 1</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
+								{:else}
+									<img src={pvOff} alt="" />
+									<h6>PV 1</h6>
+									<a href="/input/rom-plts" class="btn btn-sm mt-3"
+										><span class="badge"><i class="bi-arrow-right-circle me-1" /> Input</span></a
+									>
 								{/if}
 							</div>
 						</div>
@@ -126,12 +124,18 @@
 										<h6>PV 2</h6>
 										<p>(Stand by)</p>
 									</div>
-								{:else}
+								{:else if pv2 === 0}
 									<img src={pvOff} alt="" />
 									<div class="off py-2 mt-1">
 										<h6>PV 2</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
+								{:else}
+									<img src={pvOff} alt="" />
+									<h6>PV 2</h6>
+									<a href="/input/rom-plts" class="btn btn-sm mt-3"
+										><span class="badge"><i class="bi-arrow-right-circle me-1" /> Input</span></a
+									>
 								{/if}
 							</div>
 						</div>
@@ -143,12 +147,18 @@
 										<h6>BSS 1</h6>
 										<p>(Stand by)</p>
 									</div>
-								{:else}
+								{:else if bss1 === 0}
 									<img src={bssOff} alt="" />
 									<div class="off py-2 mt-1">
 										<h6>BSS 1</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
+								{:else}
+									<img src={bssOff} alt="" />
+									<h6>BSS 1</h6>
+									<a href="/input/rom-bss" class="btn btn-sm mt-3"
+										><span class="badge"><i class="bi-arrow-right-circle me-1" /> Input</span></a
+									>
 								{/if}
 							</div>
 						</div>
@@ -160,19 +170,29 @@
 										<h6>BSS 2</h6>
 										<p>(Stand by)</p>
 									</div>
-								{:else}
+								{:else if bss2 === 0}
 									<img src={bssOff} alt="" />
 									<div class="off py-2 mt-1">
 										<h6>BSS 2</h6>
 										<p>(Pemeliharaan)</p>
 									</div>
+								{:else}
+									<img src={bssOff} alt="" />
+									<h6>BSS 2</h6>
+									<a href="/input/rom-bss" class="btn btn-sm mt-3"
+										><span class="badge"><i class="bi-arrow-right-circle me-1" /> Input</span></a
+									>
 								{/if}
 							</div>
 						</div>
 						<div>
-							<a href="/rom" class="btn btn-sm mb-3"
-								><span class="badge"><i class="bi-arrow-right-circle me-1" /> Detail</span></a
-							>
+							{#if engine6 === 'data kosong' && engine7 === 'data kosong' && pv1 === 'data kosong' && pv2 === 'data kosong' && bss1 === 'data kosong' && bss2 === 'data kosong'}
+								<div />
+							{:else}
+								<a href="/rom" class="btn btn-sm mb-3"
+									><span class="badge"><i class="bi-arrow-right-circle me-1" /> Detail</span></a
+								>
+							{/if}
 						</div>
 					</div>
 				</div>

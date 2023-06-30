@@ -134,11 +134,11 @@
 		height: 70px;
 	}
 	.navbar-brand {
-		font-size: 30px;
+		font-size: 25px;
 		font-weight: 900;
 	}
 	.bi-box-arrow-right {
-		font-size: 25px;
+		font-size: 20px;
 		margin: 0px;
 	}
 	ul a {
@@ -151,7 +151,7 @@
 		color: #43a6a3 !important;
 	}
 	img {
-		height: 40px;
+		height: 30px;
 	}
 	h6 {
 		font-weight: 300;
@@ -167,7 +167,7 @@
 	}
 	.notif,
 	.reload {
-		font-size: 27px;
+		font-size: 22px;
 		cursor: pointer;
 	}
 	.notif-dot {
@@ -175,7 +175,7 @@
 		top: 30%;
 		left: 90%;
 		transform: translate(-50%, -50%);
-		padding: 7px;
+		padding: 5px;
 	}
 	.notif-menu {
 		width: 200px;
