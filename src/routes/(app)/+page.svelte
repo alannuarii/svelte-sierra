@@ -221,11 +221,11 @@
 	}
 	h6 {
 		margin: 0px;
-		font-size: 15px;
+		font-size: 12px;
 		color: #2f3e46;
 	}
 	.status img {
-		height: 50%;
+		height: 45%;
 	}
 	h5,
 	h2 {
