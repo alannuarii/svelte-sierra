@@ -14,8 +14,6 @@
 	const bss1 = [];
 	const bss2 = [];
 
-	console.log(rompv);
-
 	const convertStatus = (status) => {
 		if (status === 1) {
 			return 'Stand by';
