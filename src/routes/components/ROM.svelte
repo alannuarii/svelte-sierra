@@ -1,10 +1,13 @@
 <script>
 	import { checkFriday } from '../../lib/js/date';
+	import Alert from './Alert.svelte';
 
 	export let unit;
 	export let unit1;
 	export let unit2;
 	export let jenis;
+	export let form;
+
 	const days1 = ['jumat1', 'sabtu1', 'minggu1', 'senin1', 'selasa1', 'rabu1', 'kamis1'];
 	const days2 = ['jumat2', 'sabtu2', 'minggu2', 'senin2', 'selasa2', 'rabu2', 'kamis2'];
 
@@ -12,6 +15,13 @@
 	let jumat;
 	let end;
 	let checkJumat = false;
+	let checkError = false;
+
+	const objResponse = form ? form : {};
+	const response = objResponse ? objResponse.message : '';
+	if ('error' in objResponse) {
+		checkError = true;
+	}
 
 	const get7day = (event) => {
 		let friday = new Date(event.target.value);
@@ -30,6 +40,13 @@
 </script>
 
 <section>
+	{#if response}
+		{#if checkError}
+			<Alert message={response} color="danger" icon="x-circle" />
+		{:else}
+			<Alert message={response} color="success" icon="check-circle" />
+		{/if}
+	{/if}
 	<form method="POST" class="row">
 		<input type="hidden" name="jenis" value={jenis} />
 		<div class="col-lg-12">

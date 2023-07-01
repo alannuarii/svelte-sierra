@@ -1,9 +1,19 @@
 <script>
 	import { getBefore4Day } from '../../../../lib/js/date';
+	import Alert from '../../../components/Alert.svelte';
 	export let data;
+	export let form;
+
 	let dates = data.data;
 	let fourDays = getBefore4Day();
 	let checkFileUpload = false;
+	let checkError = false;
+
+	const objResponse = form ? form : {};
+	const response = objResponse ? objResponse.message : '';
+	if ('error' in objResponse) {
+		checkError = true;
+	}
 
 	const savedData = dates.map((obj) => {
 		const tanggalObj = new Date(obj.tanggal);
@@ -33,6 +43,13 @@
 </script>
 
 <section>
+	{#if response}
+		{#if checkError}
+			<Alert message={response} color="danger" icon="x-circle" />
+		{:else}
+			<Alert message={response} color="success" icon="check-circle" />
+		{/if}
+	{/if}
 	<form method="POST" enctype="multipart/form-data" class="row">
 		<div class="offset-3 col-lg-6">
 			<h1 class="mb-2 text-center">DATA IRRADIANCE</h1>

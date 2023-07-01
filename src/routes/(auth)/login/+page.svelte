@@ -1,8 +1,16 @@
 <script>
 	import icon from '../../../lib/img/icon.png';
+	import Alert from '../../components/Alert.svelte';
+
+	export let form;
+
+	const response = form ? form.message : '';
 </script>
 
 <section>
+	{#if response}
+		<Alert message={response} color="danger" icon="x-circle" />
+	{/if}
 	<div
 		class="outer position-absolute top-50 start-50 translate-middle border p-5 bg-secondary-subtle opacity-75"
 	>
@@ -73,13 +81,13 @@
 	.icon {
 		margin-top: -12px;
 	}
-	.btn-login{
-		background-color: #43A6A3;
+	.btn-login {
+		background-color: #43a6a3;
 	}
-	.btn-login:hover{
+	.btn-login:hover {
 		background-color: #43a6a3df;
 	}
-	span{
-		background-color: #43A6A3;
+	span {
+		background-color: #43a6a3;
 	}
 </style>

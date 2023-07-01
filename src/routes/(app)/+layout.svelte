@@ -2,6 +2,7 @@
 	import Sidebar from '../components/Sidebar.svelte';
 	import Header from '../components/Header.svelte';
 	import { formatTanggalObject, getBefore4Day } from '../../lib/js/date';
+	import disable from '../../lib/img/disable.gif';
 
 	export let data;
 	const status = data.token;
@@ -22,7 +23,7 @@
 	<meta name="description" content="MOMA" />
 </svelte:head>
 
-<main>
+<main id="desktop">
 	<div class="row gx-0">
 		<div class="col-2 d-none d-lg-block">
 			<Sidebar />
@@ -37,10 +38,26 @@
 		</div>
 	</div>
 </main>
+<main id="mobile" class="d-none position-absolute top-50 start-50 translate-middle">
+	<img src={disable} class="img-fluid" alt="" />
+	<h1 class="text-center">Access not available for mobile!</h1>
+</main>
 
 <style>
-	main {
+	@media screen and (max-width: 1215px) {
+		#desktop {
+			display: none;
+		}
+		#mobile {
+			display: block !important;
+		}
+	}
+	#desktop {
 		overflow-x: hidden;
+	}
+	#mobile h1 {
+		font-size: 3vw;
+		font-weight: 300;
 	}
 	.content {
 		height: 100vh;
