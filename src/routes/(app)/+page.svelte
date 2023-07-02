@@ -22,6 +22,7 @@
 	const bss1 = data.data5.data.length > 0 ? data.data5.data[0].status : 'data kosong';
 	const bss2 = data.data5.data.length > 0 ? data.data5.data[1].status : 'data kosong';
 	const prediction = data.data1.data;
+	
 </script>
 
 <section>
