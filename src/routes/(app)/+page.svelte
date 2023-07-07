@@ -33,9 +33,15 @@
 					<div class="border shadow py-3">
 						<h5 class="mb-1">Mode Operasi Hari Ini</h5>
 						<h2>{prediction}</h2>
-						<a href="/forecast/today" class="btn btn-sm mt-2"
-							><span class="badge"><i class="bi-arrow-right-circle me-1" /> Detail</span></a
-						>
+						{#if prediction === undefined}
+							<a href="/input/data-irradiance" class="btn btn-sm mt-2"
+								><span class="badge"><i class="bi-arrow-right-circle me-1" /> Input</span></a
+							>
+						{:else}
+							<a href="/forecast/today" class="btn btn-sm mt-2"
+								><span class="badge"><i class="bi-arrow-right-circle me-1" /> Detail</span></a
+							>
+						{/if}
 					</div>
 				</div>
 				<div class="col-4 mb-4">
