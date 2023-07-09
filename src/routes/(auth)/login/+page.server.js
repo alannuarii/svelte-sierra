@@ -46,7 +46,7 @@ export const actions = {
 			}
 		});
 
-		const result = await res.json();
+		const result = res.json();
 
 		// console.log(result)
 
