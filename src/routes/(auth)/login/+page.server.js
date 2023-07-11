@@ -48,7 +48,6 @@ export const actions = {
 
 		const result = await res.json();
 
-		// console.log(result)
 
 		if (!!result.access_token) {
 			cookies.set('accessToken', result.access_token, { path: '/', sameSite: 'strict' });
