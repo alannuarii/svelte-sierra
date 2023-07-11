@@ -46,7 +46,7 @@ export const actions = {
 			}
 		});
 
-		const result = res.json();
+		const result = await res.json();
 
 
 		if (!!result.access_token) {
