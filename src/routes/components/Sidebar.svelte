@@ -15,19 +15,19 @@
 </script>
 
 <div id="sidebar" class="d-flex flex-column flex-shrink-0 p-3">
-	<div class="d-flex justify-content-center mb-4">
+	<div class="d-flex justify-content-center mb-3">
 		<img src={icon} class="moma img-fluid" alt="" />
 	</div>
 	<ul class="nav nav-pills flex-column mb-auto">
 		<li class="nav-item">
-			<a href="/" class="nav-link py-3 text-secondary" aria-current="page"
+			<a href="/" class="nav-link text-secondary" aria-current="page"
 				><i class="bi-house text-primary p-1 me-2" /> Home
 			</a>
 		</li>
 		<li class="nav-item">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
-				class="nav-link py-3 text-secondary"
+				class="nav-link text-secondary"
 				aria-current="page"
 				data-bs-toggle="collapse"
 				data-bs-target="#collapseExample"
@@ -38,7 +38,7 @@
 				<i class="{isToggled1 ? 'bi-caret-up-fill' : 'bi-caret-down-fill'} ms-2" />
 			</div>
 			<div class="collapse" id="collapseExample">
-				<div class="list-group ms-5">
+				<div class="list-group ms-3">
 					<a
 						href="/input/data-irradiance"
 						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
@@ -63,14 +63,19 @@
 			</div>
 		</li>
 		<li class="nav-item">
-			<a href="/rom" class="nav-link py-3 text-secondary" aria-current="page"
+			<a href="/rom" class="nav-link text-secondary" aria-current="page"
 				><i class="bi-calendar-week text-primary p-1 me-2" /> ROM
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="/rom" class="nav-link text-secondary disabled" aria-current="page"
+				><i class="bi-table text-primary p-1 me-2" /> Rekap Data <span>(Coming Soon)</span>
 			</a>
 		</li>
 		<li class="nav-item">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
-				class="nav-link py-3 text-secondary"
+				class="nav-link text-secondary"
 				aria-current="page"
 				data-bs-toggle="collapse"
 				data-bs-target="#collapseExample2"
@@ -80,7 +85,7 @@
 				<i class="{isToggled2 ? 'bi-caret-up-fill' : 'bi-caret-down-fill'} ms-2" />
 			</div>
 			<div class="collapse" id="collapseExample2">
-				<div class="list-group ms-5">
+				<div class="list-group ms-3">
 					<a
 						href="/forecast/today"
 						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
@@ -130,7 +135,9 @@
 	i,
 	.nav-link {
 		color: #ffffff !important;
-		font-weight: 500;
+		font-weight: 300;
+		padding: 10px 10px;
+		font-size: 1vw;
 	}
 	.powered {
 		background-color: rgba(175, 238, 235, 0.392);
@@ -139,5 +146,14 @@
 	.powered p {
 		margin: 0px;
 		font-size: 12px;
+	}
+	.list-group-item {
+		font-weight: 300;
+		font-size: 1vw;
+	}
+	.nav-link span {
+		font-size: 10px;
+		color: #000;
+		font-style: italic;
 	}
 </style>

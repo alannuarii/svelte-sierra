@@ -117,14 +117,14 @@
 				</div>
 				<ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark">
 					<li>
-						<a class="dropdown-item d-flex align-items-center justify-content-center" href="/logout"
+						<a class="dropdown-item d-flex align-items-center justify-content-center auth" href="/logout"
 							><i class="bi-box-arrow-right me-2" />Log Out</a
 						>
 					</li>
 				</ul>
 			</div>
 		{:else}
-			<a href="/login" class="btn btn-secondary"><i class="bi-box-arrow-in-right me-2" />Login</a>
+			<a href="/login" class="btn btn-secondary auth"><i class="bi-box-arrow-in-right me-2" />Login</a>
 		{/if}
 	</div>
 </nav>
@@ -194,5 +194,8 @@
 		font: inherit;
 		cursor: pointer;
 		outline: inherit;
+	}
+	.auth{
+		font-size: 12px;
 	}
 </style>
