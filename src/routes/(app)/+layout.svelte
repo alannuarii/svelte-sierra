@@ -26,7 +26,7 @@
 <main id="desktop">
 	<div class="row gx-0">
 		<div class="col-2 d-none d-lg-block">
-			<Sidebar />
+			<Sidebar {status} />
 		</div>
 		<div class="col-lg-10 position-relative">
 			<div class="header position-absolute top-0 start-50 translate-middle-x">

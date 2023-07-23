@@ -2,6 +2,8 @@
 	import icon from '../../lib/img/icon.png';
 	import pnp from '../../lib/img/pnp.png';
 
+	export let status;
+
 	let isToggled1 = false;
 	let isToggled2 = false;
 
@@ -24,44 +26,48 @@
 				><i class="bi-house text-primary p-1 me-2" /> Home
 			</a>
 		</li>
-		<li class="nav-item">
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div
-				class="nav-link text-secondary"
-				aria-current="page"
-				data-bs-toggle="collapse"
-				data-bs-target="#collapseExample"
-				on:click={handleToggle1}
-			>
-				<i class="bi-input-cursor text-primary p-1 me-2" /> Input
+		{#if status.role < 2}
+			<div />
+		{:else}
+			<li class="nav-item">
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<div
+					class="nav-link text-secondary"
+					aria-current="page"
+					data-bs-toggle="collapse"
+					data-bs-target="#collapseExample"
+					on:click={handleToggle1}
+				>
+					<i class="bi-input-cursor text-primary p-1 me-2" /> Input
 
-				<i class="{isToggled1 ? 'bi-caret-up-fill' : 'bi-caret-down-fill'} ms-2" />
-			</div>
-			<div class="collapse" id="collapseExample">
-				<div class="list-group ms-3">
-					<a
-						href="/input/data-irradiance"
-						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
-						><i class="bi-lightning-charge" /> Irradiance</a
-					>
-					<a
-						href="/input/rom-pltd"
-						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
-						><i class="bi-lightning-charge" /> ROM PLTD</a
-					>
-					<a
-						href="/input/rom-plts"
-						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
-						><i class="bi-lightning-charge" /> ROM PLTS</a
-					>
-					<a
-						href="/input/rom-bss"
-						class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
-						><i class="bi-lightning-charge" /> ROM BSS</a
-					>
+					<i class="{isToggled1 ? 'bi-caret-up-fill' : 'bi-caret-down-fill'} ms-2" />
 				</div>
-			</div>
-		</li>
+				<div class="collapse" id="collapseExample">
+					<div class="list-group ms-3">
+						<a
+							href="/input/data-irradiance"
+							class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
+							><i class="bi-lightning-charge" /> Irradiance</a
+						>
+						<a
+							href="/input/rom-pltd"
+							class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
+							><i class="bi-lightning-charge" /> ROM PLTD</a
+						>
+						<a
+							href="/input/rom-plts"
+							class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
+							><i class="bi-lightning-charge" /> ROM PLTS</a
+						>
+						<a
+							href="/input/rom-bss"
+							class="list-group-item list-group-item-action bg-transparent text-secondary border border-0"
+							><i class="bi-lightning-charge" /> ROM BSS</a
+						>
+					</div>
+				</div>
+			</li>
+		{/if}
 		<li class="nav-item">
 			<a href="/rom" class="nav-link text-secondary" aria-current="page"
 				><i class="bi-calendar-week text-primary p-1 me-2" /> ROM
