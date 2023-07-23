@@ -4,7 +4,7 @@
 	export let data;
 	export let form;
 
-	let dates = data.data1.data.length > 0 ? data.data2.data : [];
+	let dates = data.data1.data.length > 0 ? data.data1.data : [];
 	let lastIrr = data.data2.data.length > 0 ? data.data2.data[0].tanggal : [];
 	let fourDays = getBefore4Day();
 	let checkFileUpload = false;
