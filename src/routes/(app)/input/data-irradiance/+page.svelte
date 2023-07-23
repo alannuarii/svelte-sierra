@@ -1,10 +1,11 @@
 <script>
-	import { getBefore4Day } from '../../../../lib/js/date';
+	import { getBefore4Day, date4 } from '../../../../lib/js/date';
 	import Alert from '../../../components/Alert.svelte';
 	export let data;
 	export let form;
 
-	let dates = data.data;
+	let dates = data.data1.data ? data.data2.data : [];
+	let lastIrr = data.data2.data ? data.data2.data[0].tanggal : [];
 	let fourDays = getBefore4Day();
 	let checkFileUpload = false;
 	let checkError = false;
@@ -67,6 +68,7 @@
 						name="tanggal"
 						required
 					/>
+					<div class="p-2"><h6>Data terakhir : {date4(lastIrr)}</h6></div>
 					<div class="d-flex flex-wrap justify-content-evenly mt-2">
 						{#each arrayDays as day}
 							<p class="tanggal">
@@ -108,6 +110,12 @@
 		font-weight: 500;
 		margin: 0px;
 		color: #43a6a3;
+	}
+	h6 {
+		margin: 0px;
+		font-size: 13px;
+		font-style: italic;
+		font-weight: 600;
 	}
 	button {
 		border-radius: 0px;

@@ -44,12 +44,25 @@ export const date3 = (tanggal) => {
 	// convert from Fri, 05 May 2023 00:00:00 GMT to 05-05-2023
 };
 
+export const date4 = (tanggal) => {
+	var dateObj = new Date(tanggal);
+	var day = dateObj.getUTCDate();
+	var month = dateObj.getUTCMonth() + 1; // Menggunakan "+1" karena bulan dimulai dari 0 (Januari=0, Februari=1, dst.)
+	var year = dateObj.getUTCFullYear();
+
+	// Mengatur format tanggal
+	var formattedDate = day + '/' + (month < 10 ? '0' : '') + month + '/' + year;
+	return formattedDate;
+
+	// convert Thu, 23 Feb 2023 00:00:00 GMT to 23/02/2023
+};
+
 export const getToday = () => {
 	let tomorrow = new Date();
 	tomorrow.setHours(tomorrow.getHours() + 8);
 	tomorrow = tomorrow.toISOString().slice(0, 10);
 	return tomorrow;
-	// 2023-02-21 tanggal hari ini 
+	// 2023-02-21 tanggal hari ini
 };
 
 export const getTomorrow = () => {

@@ -18,8 +18,14 @@ export const actions = {
 };
 
 export const load = async () => {
-	const res = await fetch(`${API_ENDPOINT}/irradiance/tanggal`);
-	const data = await res.json();
-
-	return data;
+	const [res1, res2] = await Promise.all([
+		fetch(`${API_ENDPOINT}/irradiance/tanggal`).then((res) => res.json()),
+		fetch(`${API_ENDPOINT}/last-irradiance`).then((res) => res.json())
+	]);
+	return {
+		data1: res1,
+		data2: res2
+	};
 };
+
+
