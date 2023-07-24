@@ -174,3 +174,15 @@ export const checkFriday = (friday) => {
 		return false; // Jika bukan hari Jumat, kembalikan false
 	}
 };
+
+export const getYearMonth = () => {
+	const currentDate = new Date();
+	const year = currentDate.getFullYear();
+	let month = currentDate.getMonth() + 1; // Ditambahkan 1 karena bulan dimulai dari 0
+	month = month < 10 ? `0${month}` : month; // Untuk memastikan bulan selalu memiliki 2 digit (misalnya, 01 untuk Januari)
+
+	// Format tanggal dan bulan dalam format "YYYY-MM"
+	const formattedDate = `${year}-${month}`;
+	return formattedDate;
+	// 2023-07
+};

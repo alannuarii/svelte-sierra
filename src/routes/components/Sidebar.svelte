@@ -74,8 +74,8 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="/rom" class="nav-link text-secondary disabled" aria-current="page"
-				><i class="bi-table text-primary p-1 me-2" /> Rekap Data <span>(Coming Soon)</span>
+			<a href="/rekap" class="nav-link text-secondary " aria-current="page"
+				><i class="bi-table text-primary p-1 me-2" /> Rekap Data 
 			</a>
 		</li>
 		<li class="nav-item">
@@ -157,9 +157,9 @@
 		font-weight: 300;
 		font-size: 1vw;
 	}
-	.nav-link span {
+	/* .nav-link span {
 		font-size: 10px;
 		color: #000;
 		font-style: italic;
-	}
+	} */
 </style>
