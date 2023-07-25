@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 	import { getYearMonth, yearMonthID, date } from '../../../lib/js/date';
-	import { weatherCode } from '../../../lib/js/weather';
 
 	export let data;
 	const rompltd6 = data.data1.data[0].length > 0 ? data.data1.data[0] : [];
@@ -13,8 +12,6 @@
 	const weathers = data.data4.data.length > 0 ? data.data4.data : [];
 	const irradiances = data.data5.data.length > 0 ? data.data5.data : [];
 	const mode_operasi = data.data6.data.length > 0 ? data.data6.data : [];
-
-	const code = weatherCode()
 
 	const units = ['DG 6', 'DG 7', 'PV 1', 'PV 2', 'BSS 1', 'BSS 2'];
 
@@ -76,7 +73,7 @@
 		<tbody>
 			{#each irradiances as irr, i}
 				<tr>
-					<td>{i+1}</td>
+					<td>{i + 1}</td>
 					<td>{date(irr.tanggal)}</td>
 					<td>{rompltd6[i].status}</td>
 					<td>{rompltd7[i].status}</td>
