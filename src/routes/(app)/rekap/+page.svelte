@@ -1,6 +1,21 @@
 <script>
 	import { page } from '$app/stores';
-	import { getYearMonth, yearMonthID } from '../../../lib/js/date';
+	import { getYearMonth, yearMonthID, date } from '../../../lib/js/date';
+	import { weatherCode } from '../../../lib/js/weather';
+
+	export let data;
+	const rompltd6 = data.data1.data[0].length > 0 ? data.data1.data[0] : [];
+	const rompltd7 = data.data1.data[1].length > 0 ? data.data1.data[1] : [];
+	const rompv1 = data.data2.data[0].length > 0 ? data.data2.data[0] : [];
+	const rompv2 = data.data2.data[1].length > 0 ? data.data2.data[1] : [];
+	const rombss1 = data.data3.data[0].length > 0 ? data.data3.data[0] : [];
+	const rombss2 = data.data3.data[1].length > 0 ? data.data3.data[1] : [];
+	const weathers = data.data4.data.length > 0 ? data.data4.data : [];
+	const irradiances = data.data5.data.length > 0 ? data.data5.data : [];
+	const mode_operasi = data.data6.data.length > 0 ? data.data6.data : [];
+
+	const code = weatherCode()
+
 	const units = ['DG 6', 'DG 7', 'PV 1', 'PV 2', 'BSS 1', 'BSS 2'];
 
 	$: searchParam = $page.url.search;
@@ -59,19 +74,21 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>1</td>
-				<td>Selasa, 25 November 2023</td>
-				<td>Pemeliharaan</td>
-				<td>Pemeliharaan</td>
-				<td>Pemeliharaan</td>
-				<td>Pemeliharaan</td>
-				<td>Pemeliharaan</td>
-				<td>Pemeliharaan</td>
-				<td>700</td>
-				<td>Cerah Berawan</td>
-				<td>2PV-2BSS-2DG</td>
-			</tr>
+			{#each irradiances as irr, i}
+				<tr>
+					<td>{i+1}</td>
+					<td>{date(irr.tanggal)}</td>
+					<td>{rompltd6[i].status}</td>
+					<td>{rompltd7[i].status}</td>
+					<td>{rompv1[i].status}</td>
+					<td>{rompv2[i].status}</td>
+					<td>{rombss1[i].status}</td>
+					<td>{rombss2[i].status}</td>
+					<td>{irr.value}</td>
+					<td>{weathers[i].kode}</td>
+					<td>{mode_operasi[i].mode}</td>
+				</tr>
+			{/each}
 		</tbody>
 	</table>
 </section>
