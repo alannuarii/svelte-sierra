@@ -40,12 +40,17 @@
 				<th class="align-middle" scope="col" colspan="6">STATUS PERALATAN</th>
 				<th class="align-middle" scope="col" rowspan="2"
 					><div class="d-flex flex-column justify-content-center align-items-center">
-						IRRADIANCE
+						MAX IRRADIANCE
 						<p>(kW)</p>
 					</div></th
 				>
 				<th class="align-middle" scope="col" rowspan="2">CUACA</th>
-				<th class="align-middle" scope="col" rowspan="2">MODE OPERASI</th>
+				<th class="align-middle" scope="col" rowspan="2"
+					><div class="d-flex flex-column justify-content-center align-items-center">
+						REKOMENDASI
+						<div>MODE OPERASI</div>
+					</div></th
+				>
 			</tr>
 			<tr>
 				{#each units as unit}
