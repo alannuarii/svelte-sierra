@@ -1,8 +1,10 @@
 <script>
 	import { page } from '$app/stores';
 	import { getYearMonth, yearMonthID, date } from '../../../lib/js/date';
+	import { convertWeather } from '../../../lib/js/weather';
 
 	export let data;
+
 	const rompltd6 = data.data1.data[0].length > 0 ? data.data1.data[0] : [];
 	const rompltd7 = data.data1.data[1].length > 0 ? data.data1.data[1] : [];
 	const rompv1 = data.data2.data[0].length > 0 ? data.data2.data[0] : [];
@@ -56,7 +58,7 @@
 						<p>(kW)</p>
 					</div></th
 				>
-				<th class="align-middle" scope="col" rowspan="2">CUACA</th>
+				<th class="align-middle" scope="col" rowspan="2">PREDIKSI CUACA</th>
 				<th class="align-middle" scope="col" rowspan="2"
 					><div class="d-flex flex-column justify-content-center align-items-center">
 						REKOMENDASI
@@ -82,7 +84,7 @@
 					<td>{rombss1[i].status}</td>
 					<td>{rombss2[i].status}</td>
 					<td>{irr.value}</td>
-					<td>{weathers[i].kode}</td>
+					<td>{convertWeather(parseInt(weathers[i].kode))}</td>
 					<td>{mode_operasi[i].mode}</td>
 				</tr>
 			{/each}
