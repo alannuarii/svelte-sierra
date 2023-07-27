@@ -9,6 +9,23 @@
 	let fourDays = getBefore4Day();
 	let checkFileUpload = false;
 	let checkError = false;
+	let selectDate = '';
+	let checkAlert = false;
+	let nextDate = '';
+
+	$: {
+		nextDate = new Date(lastIrr);
+		nextDate.setDate(nextDate.getDate() + 1);
+
+		const selectedDate = new Date(selectDate);
+
+		if (nextDate < selectedDate) {
+			checkAlert = true;
+			console.log(checkAlert);
+		} else {
+			checkAlert = false;
+		}
+	}
 
 	const objResponse = form ? form : {};
 	const response = objResponse ? objResponse.message : '';
@@ -59,6 +76,9 @@
 				<label for="inputEmail4" class="form-label text-center mb-2"
 					><span class="badge">Input Data Irradiance</span></label
 				>
+				<div class="alert alert-danger text-center" class:d-none={!checkAlert} role="alert">
+					Anda harus memasukkan tanggal <span>{date4(nextDate)}</span>
+				</div>
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Tanggal</label>
 					<input
@@ -66,6 +86,7 @@
 						class="form-control"
 						id="exampleFormControlInput1"
 						name="tanggal"
+						bind:value={selectDate}
 						required
 					/>
 					<div class="p-2"><h6>Data terakhir : {date4(lastIrr)}</h6></div>
@@ -94,7 +115,7 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center">
-				<button class="btn w-25 text-light" type="submit" disabled={!checkFileUpload}>Submit</button
+				<button class="btn w-25 text-light" type="submit" disabled={!checkFileUpload || checkAlert}>Submit</button
 				>
 			</div>
 		</div>
@@ -124,7 +145,10 @@
 		margin: 0px;
 		font-weight: 700;
 	}
-	span {
+	.alert span {
+		font-weight: 700;
+	}
+	label span {
 		font-size: 20px;
 		color: #43a6a3;
 		font-weight: 700;
@@ -145,5 +169,8 @@
 	}
 	.border {
 		border-radius: 25px;
+	}
+	.alert{
+		font-size: 15px;
 	}
 </style>
