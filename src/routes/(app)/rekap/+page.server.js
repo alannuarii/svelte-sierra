@@ -25,3 +25,19 @@ export const load = async (params) => {
 		data6: res6
 	};
 };
+
+export const actions = {
+	default: async ({ request }) => {
+		const data = await request.formData();
+
+		const formData = new FormData();
+		formData.append('sync', data.get('sync'));
+
+		const res = await fetch(`${API_ENDPOINT}/sync`, {
+			method: 'POST',
+			body: formData
+		});
+
+		return res.json();
+	}
+};

@@ -2,8 +2,17 @@
 	import { page } from '$app/stores';
 	import { getYearMonth, yearMonthID, date } from '../../../lib/js/date';
 	import { convertWeather } from '../../../lib/js/weather';
+	import Alert from '../../components/Alert.svelte';
 
 	export let data;
+	export let form;
+	let checkError = false;
+
+	const objResponse = form ? form : {};
+	const response = objResponse ? objResponse.message : '';
+	if ('error' in objResponse) {
+		checkError = true;
+	}
 
 	const rompltd6 = data.data1.data[0].length > 0 ? data.data1.data[0] : [];
 	const rompltd7 = data.data1.data[1].length > 0 ? data.data1.data[1] : [];
@@ -24,11 +33,18 @@
 </script>
 
 <section>
+	{#if response}
+		{#if checkError}
+			<Alert message={response} color="danger" icon="x-circle" />
+		{:else}
+			<Alert message={response} color="success" icon="check-circle" />
+		{/if}
+	{/if}
 	<h1 class="mb-4 text-center">REKAP DATA</h1>
 	<div class="row mb-2 px-2">
-		<div class="col-6">
+		<div class="col-5">
 			<div class="row d-flex align-items-center">
-				<label for="inputMonth" class="col-sm-2 col-form-label">Pilih bulan</label>
+				<label for="inputMonth" class="col-sm-3 col-form-label">Pilih bulan</label>
 				<div class="col-sm-7">
 					<form>
 						<input
@@ -42,7 +58,21 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-6  d-flex align-items-center justify-content-end">
+		<div class="col-3 d-flex justify-content-start align-items-center">
+			<form method="POST">
+				<input type="hidden" name="sync" />
+				<button type="submit" class="btn btn-sm">
+					<span class="badge"><i class="bi-arrow-repeat me-1" /> Sync</span>
+				</button>
+			</form>
+			<div class="btn btn-sm">
+				<span class="badge"><i class="bi-check2-square me-1" /> Corection</span>
+			</div>
+			<div class="btn btn-sm">
+				<span class="badge"><i class="bi-filetype-pdf me-1" /> Download</span>
+			</div>
+		</div>
+		<div class="col-4  d-flex align-items-center justify-content-end">
 			<h6>DATA BULAN {dataBulan.toUpperCase()}</h6>
 		</div>
 	</div>
@@ -113,5 +143,13 @@
 	h6 {
 		margin: 0px;
 		font-weight: 700;
+	}
+	span {
+		font-weight: 400;
+		color: #000;
+		font-size: 11px;
+	}
+	.btn {
+		border: none;
 	}
 </style>
