@@ -186,3 +186,30 @@ export const getYearMonth = () => {
 	return formattedDate;
 	// 2023-07
 };
+
+export const getNext7Day = () => {
+	const today = new Date();
+
+	let next7day;
+
+	if (today.getDay() === 5) {
+		next7day = 7;
+	} else if (today.getDay() === 6) {
+		next7day = 6;
+	} else if (today.getDay() === 0) {
+		next7day = 5;
+	} else if (today.getDay() === 1) {
+		next7day = 4;
+	} else if (today.getDay() === 2) {
+		next7day = 3;
+	} else if (today.getDay() === 3) {
+		next7day = 2;
+	} else if (today.getDay() === 4) {
+		next7day = 1;
+	}
+
+	const oneWeeksLater = new Date(today);
+	oneWeeksLater.setDate(today.getDate() + next7day);
+	return oneWeeksLater;
+	// 2023-08-11T12:07:05.812Z Tipe data Datetime
+};

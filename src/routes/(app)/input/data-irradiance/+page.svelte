@@ -21,7 +21,6 @@
 
 		if (nextDate < selectedDate) {
 			checkAlert = true;
-			console.log(checkAlert);
 		} else {
 			checkAlert = false;
 		}

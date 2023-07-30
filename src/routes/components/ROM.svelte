@@ -1,5 +1,5 @@
 <script>
-	import { checkFriday } from '../../lib/js/date';
+	import { checkFriday, getNext7Day, date4 } from '../../lib/js/date';
 	import Alert from './Alert.svelte';
 
 	export let unit;
@@ -16,6 +16,7 @@
 	let end;
 	let checkJumat = false;
 	let checkError = false;
+	let checkAlert = false;
 
 	const objResponse = form ? form : {};
 	const response = objResponse ? objResponse.message : '';
@@ -37,6 +38,17 @@
 	};
 
 	$: checkJumat = checkFriday(jumat);
+	$: {
+		const next7Day = getNext7Day();
+
+		const selectedDate = new Date(jumat);
+
+		if (next7Day < selectedDate) {
+			checkAlert = true;
+		} else {
+			checkAlert = false;
+		}
+	}
 </script>
 
 <section>
@@ -56,6 +68,9 @@
 				<label for="inputEmail4" class="form-label mb-2"
 					><span class="badge p-2">PERIODE ROM</span></label
 				>
+				<div class="alert alert-danger text-center" class:d-none={!checkAlert} role="alert">
+					Anda tidak diperbolehkan memasukkan tanggal setelah <span>{date4(getNext7Day())}</span>
+				</div>
 				<div class="col-lg-6">
 					<div class="mb-3">
 						<label for="exampleFormControlInput1" class="form-label">Start (Jumat)</label>
@@ -176,7 +191,7 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center">
-				<button class="btn w-25 text-light" type="submit" disabled={!checkJumat}>Submit</button>
+				<button class="btn w-25 text-light" type="submit" disabled={!checkJumat || checkAlert}>Submit</button>
 			</div>
 		</div>
 	</form>
@@ -199,7 +214,10 @@
 		margin: 0px;
 		font-weight: 500;
 	}
-	span {
+	.alert span {
+		font-weight: 700;
+	}
+	label span {
 		font-size: 20px;
 		color: #43a6a3;
 		font-weight: 700;
@@ -223,5 +241,8 @@
 	}
 	.u2 {
 		border-radius: 0 25px 25px 0;
+	}
+	.alert{
+		font-size: 15px;
 	}
 </style>
