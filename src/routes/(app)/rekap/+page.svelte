@@ -66,7 +66,7 @@
 				</button>
 			</form>
 			<div class="btn btn-sm">
-				<span class="badge"><i class="bi-check2-square me-1" /> Corection</span>
+				<span class="badge"><i class="bi-check2-square me-1" /> Correction</span>
 			</div>
 			<div class="btn btn-sm">
 				<span class="badge"><i class="bi-filetype-pdf me-1" /> Download</span>
@@ -103,21 +103,27 @@
 			</tr>
 		</thead>
 		<tbody>
-			{#each irradiances as irr, i}
-				<tr>
-					<td>{i + 1}</td>
-					<td>{date(irr.tanggal)}</td>
-					<td>{rompltd6[i].status}</td>
-					<td>{rompltd7[i].status}</td>
-					<td>{rompv1[i].status}</td>
-					<td>{rompv2[i].status}</td>
-					<td>{rombss1[i].status}</td>
-					<td>{rombss2[i].status}</td>
-					<td>{irr.value}</td>
-					<td>{convertWeather(parseInt(weathers[i].kode))}</td>
-					<td>{mode_operasi[i].mode}</td>
+			{#if irradiances.length > 0}
+				{#each irradiances as irr, i}
+					<tr>
+						<td>{i + 1}</td>
+						<td>{date(irr.tanggal)}</td>
+						<td>{rompltd6[i].status}</td>
+						<td>{rompltd7[i].status}</td>
+						<td>{rompv1[i].status}</td>
+						<td>{rompv2[i].status}</td>
+						<td>{rombss1[i].status}</td>
+						<td>{rombss2[i].status}</td>
+						<td>{irr.value}</td>
+						<td>{convertWeather(parseInt(weathers[i].kode))}</td>
+						<td>{mode_operasi[i].mode}</td>
+					</tr>
+				{/each}
+				{:else}
+				<tr class="kosong">
+					<td colspan="11" class="align-middle">Data Kosong</td>
 				</tr>
-			{/each}
+			{/if}
 		</tbody>
 	</table>
 </section>
@@ -151,5 +157,8 @@
 	}
 	.btn {
 		border: none;
+	}
+	.kosong{
+		height: 300px;
 	}
 </style>

@@ -188,7 +188,8 @@ export const getYearMonth = () => {
 };
 
 export const getNext7Day = () => {
-	const today = new Date();
+	let today = new Date();
+	today.setHours(today.getHours() + 8);
 
 	let next7day;
 
