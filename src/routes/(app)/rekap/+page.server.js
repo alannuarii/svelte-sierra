@@ -32,12 +32,21 @@ export const actions = {
 
 		const formData = new FormData();
 		formData.append('sync', data.get('sync'));
+		formData.append('correction', data.get('correction'));
 
-		const res = await fetch(`${API_ENDPOINT}/sync`, {
-			method: 'POST',
-			body: formData
-		});
-
-		return res.json();
+		const correctionValue = formData.get('correction');
+		if (correctionValue === 'correction') {
+			const res = await fetch(`${API_ENDPOINT}/correction`, {
+				method: 'POST',
+				body: formData
+			});
+			return res.json();
+		} else {
+			const res = await fetch(`${API_ENDPOINT}/sync`, {
+				method: 'POST',
+				body: formData
+			});
+			return res.json();
+		}
 	}
 };

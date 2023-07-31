@@ -60,14 +60,17 @@
 		</div>
 		<div class="col-3 d-flex justify-content-start align-items-center">
 			<form method="POST">
-				<input type="hidden" name="sync" />
+				<input type="hidden" name="sync" value="sync" />
 				<button type="submit" class="btn btn-sm">
 					<span class="badge"><i class="bi-arrow-repeat me-1" /> Sync</span>
 				</button>
 			</form>
-			<div class="btn btn-sm">
-				<span class="badge"><i class="bi-check2-square me-1" /> Correction</span>
-			</div>
+			<form method="POST">
+				<input type="hidden" name="correction" value="correction" />
+				<button type="submit" class="btn btn-sm">
+					<span class="badge"><i class="bi-check2-square me-1" /> Correction</span>
+				</button>
+			</form>
 			<div class="btn btn-sm">
 				<span class="badge"><i class="bi-filetype-pdf me-1" /> Download</span>
 			</div>
@@ -119,7 +122,7 @@
 						<td>{mode_operasi[i].mode}</td>
 					</tr>
 				{/each}
-				{:else}
+			{:else}
 				<tr class="kosong">
 					<td colspan="11" class="align-middle">Data Kosong</td>
 				</tr>
@@ -158,7 +161,7 @@
 	.btn {
 		border: none;
 	}
-	.kosong{
+	.kosong {
 		height: 300px;
 	}
 </style>
