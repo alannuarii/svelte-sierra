@@ -62,17 +62,17 @@
 			<form method="POST">
 				<input type="hidden" name="sync" value="sync" />
 				<button type="submit" class="btn btn-sm">
-					<span class="badge"><i class="bi-arrow-repeat me-1" /> Sync</span>
+					<span><i class="bi-arrow-repeat me-1" /> Sync</span>
 				</button>
 			</form>
 			<form method="POST">
 				<input type="hidden" name="correction" value="correction" />
 				<button type="submit" class="btn btn-sm">
-					<span class="badge"><i class="bi-check2-square me-1" /> Correction</span>
+					<span><i class="bi-check2-square me-1" /> Correction</span>
 				</button>
 			</form>
 			<div class="btn btn-sm">
-				<span class="badge"><i class="bi-filetype-pdf me-1" /> Download</span>
+				<span><i class="bi-filetype-pdf me-1" /> Download</span>
 			</div>
 		</div>
 		<div class="col-4  d-flex align-items-center justify-content-end">
