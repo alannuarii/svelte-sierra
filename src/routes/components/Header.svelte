@@ -32,13 +32,26 @@
 			></a
 		>
 		<div class="ms-auto me-4 reload">
-			<button
-				on:click={reload}
-				data-bs-toggle="tooltip"
-				data-bs-placement="bottom"
-				data-bs-title="Reload"><i class="bi-arrow-clockwise" /></button
+			<button on:click={reload}
+				><i
+					class="bi-arrow-clockwise"
+					data-bs-toggle="tooltip"
+					data-bs-placement="bottom"
+					data-bs-title="Reload"
+				/></button
 			>
 		</div>
+		<div class="me-4 reload">
+			<button data-bs-toggle="modal" data-bs-target="#modalSOP2"
+				><i
+					class="bi-info-circle"
+					data-bs-toggle="tooltip"
+					data-bs-placement="bottom"
+					data-bs-title="SOP"
+				/></button
+			>
+		</div>
+
 		{#if login}
 			<div class="dropdown-center me-4">
 				<i
@@ -117,14 +130,17 @@
 				</div>
 				<ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark">
 					<li>
-						<a class="dropdown-item d-flex align-items-center justify-content-center auth" href="/logout"
-							><i class="bi-box-arrow-right me-2" />Log Out</a
+						<a
+							class="dropdown-item d-flex align-items-center justify-content-center auth"
+							href="/logout"><i class="bi-box-arrow-right me-2" />Log Out</a
 						>
 					</li>
 				</ul>
 			</div>
 		{:else}
-			<a href="/login" class="btn btn-secondary auth"><i class="bi-box-arrow-in-right me-2" />Login</a>
+			<a href="/login" class="btn btn-secondary auth"
+				><i class="bi-box-arrow-in-right me-2" />Login</a
+			>
 		{/if}
 	</div>
 </nav>
@@ -195,7 +211,7 @@
 		cursor: pointer;
 		outline: inherit;
 	}
-	.auth{
+	.auth {
 		font-size: 12px;
 	}
 </style>

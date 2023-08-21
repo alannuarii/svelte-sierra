@@ -51,7 +51,7 @@
 			</div>
 			<div class="modal-body">
 				<!-- svelte-ignore a11y-missing-attribute -->
-				<object type="application/pdf" data={modepdf} width="100%" height="560px">
+				<object type="application/pdf" data={modepdf} width="100%" height="530px">
 					<p>
 						Maaf, browser Anda tidak mendukung tampilan PDF. Silakan unduh file untuk melihatnya.
 					</p>

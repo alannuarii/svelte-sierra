@@ -3,6 +3,7 @@
 	import Header from '../components/Header.svelte';
 	import { formatTanggalObject, getBefore4Day } from '../../lib/js/date';
 	import disable from '../../lib/img/disable.gif';
+	import ModalSop2 from '../components/ModalSOP2.svelte';
 
 	export let data;
 	const status = data.token;
@@ -37,6 +38,7 @@
 			</div>
 		</div>
 	</div>
+	<ModalSop2 />
 </main>
 <main id="mobile" class="d-none position-absolute top-50 start-50 translate-middle">
 	<img src={disable} class="img-fluid" alt="" />
