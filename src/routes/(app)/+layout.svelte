@@ -46,7 +46,7 @@
 </main>
 
 <style>
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 1200px) {
 		#desktop {
 			display: none;
 		}
