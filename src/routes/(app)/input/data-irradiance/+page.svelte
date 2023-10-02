@@ -114,7 +114,8 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center">
-				<button class="btn w-25 text-light" type="submit" disabled={!checkFileUpload || checkAlert}>Submit</button
+				<button class="btn w-25 text-light" type="submit" disabled={!checkFileUpload || checkAlert}
+					>Submit</button
 				>
 			</div>
 		</div>
@@ -169,7 +170,12 @@
 	.border {
 		border-radius: 25px;
 	}
-	.alert{
+	.alert {
 		font-size: 15px;
+	}
+	@media screen and (max-width: 1100px) {
+		.tanggal {
+			font-size: 11px;
+		}
 	}
 </style>
