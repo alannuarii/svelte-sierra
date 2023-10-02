@@ -109,7 +109,7 @@
 						<div class="mb-3 py-0 mb-3">
 							<div class="row">
 								<div class="col-lg-2 d-flex flex-column align-items-center justify-content-center">
-									<label for="inputEmail4" class="form-label"
+									<label for="inputEmail4" class="form-label day"
 										>{day.toLocaleUpperCase().slice(0, -1)}</label
 									>
 									<p class:d-none={!dates.length}>{dates[i]}</p>
@@ -154,7 +154,7 @@
 						<div class="mb-3 py-0 mb-3">
 							<div class="row">
 								<div class="col-lg-2 d-flex flex-column align-items-center justify-content-center">
-									<label for="inputEmail4" class="form-label"
+									<label for="inputEmail4" class="form-label day"
 										>{day.toLocaleUpperCase().slice(0, -1)}</label
 									>
 									<p class:d-none={!dates.length}>{dates[i]}</p>
@@ -244,5 +244,11 @@
 	}
 	.alert{
 		font-size: 15px;
+	}
+	@media screen and (max-width: 1100px) {
+		.day{
+			font-size: 14px;
+			margin-right: 25px;
+		}
 	}
 </style>
