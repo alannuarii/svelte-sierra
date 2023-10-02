@@ -146,11 +146,6 @@
 </nav>
 
 <style>
-	@media screen and (max-width: 1100px) {
-		.reload, .notif, .user {
-			display: none;
-		}
-	}
 	nav {
 		height: 70px;
 	}
@@ -218,5 +213,14 @@
 	}
 	.auth {
 		font-size: 12px;
+	}
+	@media screen and (max-width: 1100px) {
+		.reload,
+		.notif {
+			display: none;
+		}
+		.user h6 {
+			display: none !important;
+		}
 	}
 </style>

@@ -53,7 +53,7 @@
 						<input type="text" class="form-control" value={prediction} disabled />
 					</div>
 					<div class="col-4">
-						<button class="btn text-light" data-bs-toggle="modal" data-bs-target="#modalSOP"
+						<button class="btn text-light sop" data-bs-toggle="modal" data-bs-target="#modalSOP"
 							>Lihat SOP</button
 						>
 					</div>
@@ -97,7 +97,12 @@
 	.btn:hover {
 		background-color: #43a6a3df;
 	}
-	.border{
+	.border {
 		border-radius: 25px;
+	}
+	@media screen and (max-width: 1100px) {
+		.sop {
+			display: none;
+		}
 	}
 </style>
