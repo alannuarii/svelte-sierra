@@ -123,8 +123,8 @@
 					</div>
 				</ul>
 			</div>
-			<div class="dropdown-center">
-				<div class="me-3 user d-flex" data-bs-toggle="dropdown" data-bs-display="static">
+			<div class="dropdown-center user">
+				<div class="me-3 d-flex" data-bs-toggle="dropdown" data-bs-display="static">
 					<img src={unknown} class="me-2" alt="" />
 					<h6 class="d-block my-auto">{status.name}</h6>
 				</div>
@@ -146,6 +146,11 @@
 </nav>
 
 <style>
+	@media screen and (max-width: 1215px) {
+		.reload, .notif, .user {
+			display: none;
+		}
+	}
 	nav {
 		height: 70px;
 	}
