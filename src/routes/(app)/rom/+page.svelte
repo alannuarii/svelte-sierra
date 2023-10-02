@@ -148,4 +148,14 @@
 		color: #ffffff;
 		border-bottom: 3px solid #aac548;
 	}
+	@media screen and (max-width: 1100px) {
+		td,
+		th {
+			font-size: 12px;
+			height: 60px;
+		}
+		.tanggal{
+			font-size: 10px;
+		}
+	}
 </style>
