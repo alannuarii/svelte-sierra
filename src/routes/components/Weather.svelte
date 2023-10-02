@@ -47,4 +47,12 @@
 	img {
 		height: 150px;
 	}
+	@media screen and (max-width: 1100px) {
+		img{
+			height: 100px;
+		}
+		h4{
+			font-size: 15px;
+		}
+	}
 </style>

@@ -275,4 +275,37 @@
 	.border {
 		border-radius: 25px;
 	}
+	@media screen and (max-width: 1100px) {
+		.icon{
+			height: 160px;
+			width: 100%;
+		}
+		.status img {
+			width: 100%;
+		}
+		h2{
+			font-size: 22px;
+		}
+		h3{
+			font-size: 15px;
+		}
+		h5{
+			font-size: 20px;
+		}
+		p {
+			font-size: 8px;
+		}
+		h6{
+			font-size: 10px;
+		}
+		.on {
+			border: 3px solid #43a6a3;
+			border-radius: 10px;
+		}
+		.off {
+			border: 3px solid #2f3e46;
+			border-radius: 10px;
+			color: #ffffff;
+		}
+	}
 </style>

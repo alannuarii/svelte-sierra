@@ -59,4 +59,21 @@
 	img {
 		width: 40px;
 	}
+	@media screen and (max-width: 1100px) {
+		h6{
+			font-size: 8px;
+		}
+		p{
+			font-size: 10px;
+		}
+		img{
+			width: 25px;
+		}
+		.source{
+			margin-top: -5px !important;
+		}
+		.source a{
+			font-size: 7px;
+		}
+	}
 </style>
