@@ -58,7 +58,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-3 d-flex justify-content-start align-items-center">
+		<div class="col-3 d-flex justify-content-start align-items-center menu-nav">
 			<form method="POST">
 				<input type="hidden" name="sync" value="sync" />
 				<button type="submit" class="btn btn-sm">
@@ -163,5 +163,16 @@
 	}
 	.kosong {
 		height: 300px;
+	}
+	@media screen and (max-width: 1100px) {
+		.menu-nav i {
+			display: none;
+		}
+		thead th{
+			font-size: 12px;
+		}
+		tbody td{
+			font-size: 9px;
+		}
 	}
 </style>
