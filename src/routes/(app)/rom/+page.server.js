@@ -1,4 +1,4 @@
-import { API_ENDPOINT } from '../../../lib/js/endpoint';
+import { API_ENDPOINT } from '$env/static/private';
 
 export const load = async () => {
 	const [res1, res2, res3] = await Promise.all([

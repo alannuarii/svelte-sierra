@@ -1,5 +1,5 @@
 import jwtDecode from 'jwt-decode';
-import { API_ENDPOINT } from '../../lib/js/endpoint';
+import { API_ENDPOINT } from '$env/static/private';
 
 export const load = async ({ cookies }) => {
 	const token = cookies.get('accessToken');

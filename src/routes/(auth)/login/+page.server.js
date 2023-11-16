@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
-import { API_ENDPOINT } from '../../../lib/js/endpoint';
+import { API_AUTH } from '$env/static/private';
 
 // export const actions = {
 // 	default: async ({ request, cookies }) => {
@@ -38,7 +38,7 @@ export const actions = {
 			parsedData[name] = value;
 		}
 
-		const res = await fetch('https://sierrajs.alanpy.xyz/login', {
+		const res = await fetch(`${API_AUTH}/login`, {
 			method: 'POST',
 			body: JSON.stringify(parsedData),
 			headers: {

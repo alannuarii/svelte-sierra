@@ -1,5 +1,5 @@
 import { getToday } from '../../../../lib/js/date';
-import { API_ENDPOINT } from '../../../../lib/js/endpoint';
+import { API_ENDPOINT } from '$env/static/private';
 
 export const load = async (params) => {
 	const today = getToday();
