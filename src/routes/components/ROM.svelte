@@ -64,7 +64,7 @@
 		<div class="col-lg-12">
 			<h1 class="mb-2 text-center">RENCANA OPERASI MINGGUAN</h1>
 			<h3 class="mb-4 text-center">{unit}</h3>
-			<div class="row mb-3 text-center border shadow-sm head pt-3 px-3">
+			<div class="row mb-3 text-center border bg-white shadow-sm head pt-3 px-3">
 				<label for="inputEmail4" class="form-label mb-2"
 					><span class="badge p-2">PERIODE ROM</span></label
 				>
@@ -99,7 +99,7 @@
 				</div>
 			</div>
 			<div class="row gx-5 mb-4">
-				<div class="col-lg-6 border shadow-sm u1 px-5 pt-4 pb-3">
+				<div class="col-lg-6 border bg-white shadow-sm u1 px-5 pt-4 pb-3">
 					<div class="text-center">
 						<label for="inputEmail4" class="form-label mb-4"
 							><span class="badge p-2">{unit1}</span></label
@@ -144,7 +144,7 @@
 						</div>
 					{/each}
 				</div>
-				<div class="col-lg-6 border shadow-sm u2 px-5 pt-4 pb-3">
+				<div class="col-lg-6 border bg-white shadow-sm u2 px-5 pt-4 pb-3">
 					<div class="text-center">
 						<label for="inputEmail4" class="form-label mb-4"
 							><span class="badge p-2">{unit2}</span></label
@@ -191,7 +191,9 @@
 				</div>
 			</div>
 			<div class="d-flex justify-content-center">
-				<button class="btn w-25 text-light" type="submit" disabled={!checkJumat || checkAlert}>Submit</button>
+				<button class="btn w-25 text-light" type="submit" disabled={!checkJumat || checkAlert}
+					>Submit</button
+				>
 			</div>
 		</div>
 	</form>
@@ -242,11 +244,11 @@
 	.u2 {
 		border-radius: 0 25px 25px 0;
 	}
-	.alert{
+	.alert {
 		font-size: 15px;
 	}
 	@media screen and (max-width: 1100px) {
-		.day{
+		.day {
 			font-size: 14px;
 			margin-right: 25px;
 		}

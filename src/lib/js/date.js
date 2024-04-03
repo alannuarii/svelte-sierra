@@ -65,6 +65,14 @@ export const getToday = () => {
 	// 2023-02-21 tanggal hari ini
 };
 
+export const getYesterday = () => {
+	let tomorrow = new Date();
+	tomorrow.setHours(tomorrow.getHours() - 16);
+	tomorrow = tomorrow.toISOString().slice(0, 10);
+	return tomorrow;
+	// 2023-02-21 tanggal hari ini
+};
+
 export const getTomorrow = () => {
 	let tomorrow = new Date();
 	tomorrow.setHours(tomorrow.getHours() + 32);
@@ -214,3 +222,11 @@ export const getNext7Day = () => {
 	return oneWeeksLater;
 	// 2023-08-11T12:07:05.812Z Tipe data Datetime
 };
+
+export function convertDate(tanggal) {
+	const date = new Date(tanggal);
+	const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+	const result = date.toLocaleDateString('id-ID', options);
+	return result;
+	// 'Senin, 20 Februari 2023'
+}

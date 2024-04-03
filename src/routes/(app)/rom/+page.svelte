@@ -50,7 +50,7 @@
 
 <section>
 	<h1 class="mb-4 text-center">RENCANA OPERASI MINGGUAN</h1>
-	<table class="table text-center">
+	<table class="table text-center bg-white">
 		<thead>
 			<tr class="align-middle header">
 				<th scope="col">Unit</th>
@@ -154,7 +154,7 @@
 			font-size: 12px;
 			height: 60px;
 		}
-		.tanggal{
+		.tanggal {
 			font-size: 10px;
 		}
 	}

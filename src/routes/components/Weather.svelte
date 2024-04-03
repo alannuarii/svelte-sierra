@@ -45,13 +45,13 @@
 
 <style>
 	img {
-		height: 150px;
+		height: 130px;
 	}
 	@media screen and (max-width: 1100px) {
-		img{
+		img {
 			height: 100px;
 		}
-		h4{
+		h4 {
 			font-size: 15px;
 		}
 	}

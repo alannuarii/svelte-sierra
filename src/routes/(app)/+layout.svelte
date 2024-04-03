@@ -33,7 +33,7 @@
 			<div class="header position-absolute top-0 start-50 translate-middle-x">
 				<Header {status} {irr1} {irr2} {irr3} {irr4} />
 			</div>
-			<div class="content px-5 bg-white">
+			<div class="content px-5">
 				<slot />
 			</div>
 		</div>
@@ -56,6 +56,8 @@
 	}
 	#desktop {
 		overflow-x: hidden;
+		background-image: url('../../lib/img/bg.jpg');
+		background-size: cover;
 	}
 	#mobile h1 {
 		font-size: 3vw;

@@ -1,6 +1,6 @@
 <script>
 	import icon from '../../lib/img/icon.png';
-	import pnp from '../../lib/img/pnp.png';
+	import pnp from '../../lib/img/np.png';
 
 	export let status;
 
@@ -75,7 +75,7 @@
 		</li>
 		<li class="nav-item">
 			<a href="/rekap" class="nav-link text-secondary " aria-current="page"
-				><i class="bi-table text-primary p-1 me-2" /> Rekap Data 
+				><i class="bi-table text-primary p-1 me-2" /> Rekap Data
 			</a>
 		</li>
 		<li class="nav-item">
@@ -105,20 +105,28 @@
 				</div>
 			</div>
 		</li>
+		<li class="nav-item">
+			<a href="/bssoptima" class="nav-link text-secondary " aria-current="page"
+				><i class="bi-battery-charging text-primary p-1 me-2" /> BSS optima
+			</a>
+		</li>
 	</ul>
-	<div class="powered d-flex flex-column justify-content-center align-items-center py-2">
-		<p class="mb-1">Powered by</p>
+	<div class="powered position-absolute bottom-0 start-0 mb-3 ms-3">
 		<img src={pnp} class="img-fluid pnp mb-1" alt="" />
 	</div>
 </div>
 
 <style>
 	#sidebar {
+		color: #ffffff;
 		width: 100%;
 		height: 100vh;
 		background-color: #43a6a3;
-		border-right: 5px solid #aac548;
-		border-radius: 0 0 40px 0;
+		background-image: url('../../lib/img/bolt.png');
+		background-position: left;
+		background-repeat: no-repeat;
+		background-size: 180%;
+		border-radius: 0 0 150px 0;
 	}
 	a {
 		text-decoration: none;
@@ -136,7 +144,7 @@
 		border-radius: 20px;
 	}
 	.pnp {
-		width: 60%;
+		width: 10%;
 	}
 	i,
 	.nav-link {
@@ -144,14 +152,6 @@
 		font-weight: 300;
 		padding: 10px 10px;
 		font-size: 1vw;
-	}
-	.powered {
-		background-color: rgba(175, 238, 235, 0.392);
-		border-radius: 15px;
-	}
-	.powered p {
-		margin: 0px;
-		font-size: 12px;
 	}
 	.list-group-item {
 		font-weight: 300;

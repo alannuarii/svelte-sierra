@@ -9,7 +9,7 @@
 	const satuan = '\u00B0C';
 </script>
 
-<div class="d-flex justify-content-evenly align-content-center">
+<div class="d-flex justify-content-evenly align-content-center bg-white py-2 rounded-4">
 	<div class="text-center">
 		<h6 class="mb-1 p-1">Suhu Udara</h6>
 		<img class="py-1" src={suhu} alt="" />
@@ -60,19 +60,19 @@
 		width: 40px;
 	}
 	@media screen and (max-width: 1100px) {
-		h6{
+		h6 {
 			font-size: 8px;
 		}
-		p{
+		p {
 			font-size: 10px;
 		}
-		img{
+		img {
 			width: 25px;
 		}
-		.source{
+		.source {
 			margin-top: -5px !important;
 		}
-		.source a{
+		.source a {
 			font-size: 7px;
 		}
 	}

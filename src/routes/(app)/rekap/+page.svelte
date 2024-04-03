@@ -79,7 +79,7 @@
 			<h6>DATA BULAN {dataBulan.toUpperCase()}</h6>
 		</div>
 	</div>
-	<table class="table table-bordered text-center">
+	<table class="table table-bordered text-center bg-white">
 		<thead>
 			<tr>
 				<th class="align-middle" scope="col" rowspan="2">NO</th>
@@ -168,10 +168,10 @@
 		.menu-nav i {
 			display: none;
 		}
-		thead th{
+		thead th {
 			font-size: 12px;
 		}
-		tbody td{
+		tbody td {
 			font-size: 9px;
 		}
 	}

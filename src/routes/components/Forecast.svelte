@@ -50,7 +50,7 @@
 				<label for="exampleFormControlInput1" class="form-label">Mode Operasi</label>
 				<div class="row">
 					<div class="col-8">
-						<input type="text" class="form-control" value={prediction} disabled />
+						<input type="text" class="form-control bg-white" value={prediction} disabled />
 					</div>
 					<div class="col-4">
 						<button class="btn text-light sop" data-bs-toggle="modal" data-bs-target="#modalSOP"
@@ -60,7 +60,7 @@
 					<ModalSop {prediction} />
 				</div>
 			</div>
-			<div class="mt-4 border shadow-sm mb-3">
+			<div class="mt-4 border bg-white shadow-sm mb-2">
 				<h6 class="text-center p-3">Prediksi Cuaca</h6>
 				<div class="d-flex flex-column justify-content-center align-items-center">
 					<Weather {weather} />
@@ -68,7 +68,7 @@
 			</div>
 			<Parameter {temperature} {humidity} {wind} />
 		</div>
-		<div class="col-lg-8 text-center mt-5">
+		<div class="col-lg-8 text-center mt-4">
 			<IrradianceChart {arrayIrradiance} />
 		</div>
 	</div>

@@ -71,7 +71,7 @@
 		<div class="offset-3 col-lg-6">
 			<h1 class="mb-2 text-center">DATA IRRADIANCE</h1>
 			<h3 class="mb-4 text-center">PLTS Sangihe</h3>
-			<div class="row mb-3 border shadow-sm p-4">
+			<div class="row mb-3 border bg-white shadow-sm p-4">
 				<label for="inputEmail4" class="form-label text-center mb-2"
 					><span class="badge">Input Data Irradiance</span></label
 				>

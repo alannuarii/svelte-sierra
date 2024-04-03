@@ -30,7 +30,7 @@
 			<div class="row gx-5">
 				<div class="col-8">
 					<div><Timer /></div>
-					<div class="border shadow py-3">
+					<div class="border bg-white shadow py-3">
 						<h5 class="mb-1">Mode Operasi Hari Ini</h5>
 						<h2>{prediction}</h2>
 						{#if prediction === undefined}
@@ -50,7 +50,7 @@
 			</div>
 			<div class="row gx-5">
 				<div class="col-8">
-					<div class="row border shadow status">
+					<div class="row border bg-white shadow status">
 						<h3 class="text-center py-3">Status Peralatan Hari Ini</h3>
 						<div class="col-2 d-flex justify-content-end py-4">
 							<div class="d-flex flex-column justify-content-center">
@@ -202,7 +202,7 @@
 					</div>
 				</div>
 				<div class="col-4">
-					<div class="border shadow mb-1">
+					<div class="border bg-white shadow mb-1">
 						<h3 class="text-center py-3">Prediksi Cuaca Hari Ini</h3>
 						<div class="d-flex flex-column justify-content-center align-items-center">
 							<Weather {weather} />
@@ -276,26 +276,26 @@
 		border-radius: 25px;
 	}
 	@media screen and (max-width: 1100px) {
-		.icon{
+		.icon {
 			height: 160px;
 			width: 100%;
 		}
 		.status img {
 			width: 100%;
 		}
-		h2{
+		h2 {
 			font-size: 22px;
 		}
-		h3{
+		h3 {
 			font-size: 15px;
 		}
-		h5{
+		h5 {
 			font-size: 20px;
 		}
 		p {
 			font-size: 8px;
 		}
-		h6{
+		h6 {
 			font-size: 10px;
 		}
 		.on {
