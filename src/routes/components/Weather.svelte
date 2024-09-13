@@ -8,6 +8,7 @@
 	import hujanSedang from '../../lib/img/cuaca/hujan-sedang.gif';
 	import { weatherCode } from '../../lib/js/weather';
 
+	
 	export let weather;
 
 	const code = weatherCode;
