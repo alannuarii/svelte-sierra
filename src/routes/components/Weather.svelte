@@ -33,7 +33,7 @@
 
 	for (let i = 0; i < code.length; i++) {
 		const key = Object.keys(code[i])[0];
-		if (key === weather) {
+		if (key === weather.toString()) {
 			cuaca = code[i][key];
 			gambar = gambarCuaca[i][key];
 			break;
