@@ -26,7 +26,7 @@
 		<h6 class="mb-1 p-1">Kecepatan Angin</h6>
 		<img class="py-1" src={angin} alt="" />
 		<!-- <i class="bi-wind" /> -->
-		<p>{wind} knot</p>
+		<p>{wind} km/jam</p>
 	</div>
 </div>
 <div class="source mt-1 text-center">
