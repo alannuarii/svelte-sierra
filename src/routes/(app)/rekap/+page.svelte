@@ -106,19 +106,19 @@
 			</tr>
 		</thead>
 		<tbody>
-			{#if irradiances.length > 0}
-				{#each irradiances as irr, i}
+			{#if weathers.length > 0}
+				{#each weathers as w, i}
 					<tr>
 						<td>{i + 1}</td>
-						<td>{date(irr.tanggal)}</td>
+						<td>{date(w.tanggal)}</td>
 						<td>{rompltd6[i].status}</td>
 						<td>{rompltd7[i].status}</td>
 						<td>{rompv1[i].status}</td>
 						<td>{rompv2[i].status}</td>
 						<td>{rombss1[i].status}</td>
 						<td>{rombss2[i].status}</td>
-						<td>{irr.value}</td>
-						<td>{convertWeather(parseInt(weathers[i].kode))}</td>
+						<td>{irradiances[i].value}</td>
+						<td>{convertWeather(parseInt(w.kode))}</td>
 						<td>{mode_operasi[i].mode}</td>
 					</tr>
 				{/each}
